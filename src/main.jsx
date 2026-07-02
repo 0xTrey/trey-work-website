@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import {
   ArrowRight,
   ArrowUpRight,
-  BriefcaseBusiness,
   Building2,
   Download,
   FileText,
@@ -12,10 +11,8 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  RadioTower,
   Sparkles,
-  SquareArrowOutUpRight,
-  Workflow,
+  X as XIcon,
 } from 'lucide-react';
 import './styles.css';
 
@@ -24,19 +21,19 @@ const resumePath = '/resume/Trey-Harnden-Resume-June-2026.pdf';
 const metrics = [
   {
     value: '20+',
-    label: 'six-figure Folloze deals',
+    label: 'new-logo six-figure deals while at Folloze',
   },
   {
     value: '111%',
-    label: 'NRR against a $3.57M TCV quota',
+    label: 'NRR against 2025 quota of $3.57M TCV',
   },
   {
     value: '27%',
-    label: 'H1 inbound demo lift from machine-first content agents',
+    label: 'H1 2026 inbound demo lift from machine-first content agents',
   },
   {
-    value: '2 cities',
-    label: 'ready to relocate for Seattle or San Francisco',
+    value: '$138K',
+    label: 'lifetime average contract value at Folloze',
   },
 ];
 
@@ -59,7 +56,7 @@ const proofCards = [
   },
   {
     title: 'AI systems builder',
-    body: 'Builds practical agents and tools across outbound, thought leadership, meeting prep, follow-up, demo environments, deal rooms, CRM hygiene, and customer research.',
+    body: 'Built & launched agents to automate internal workflows across sales and marketing, as well as sold & launched customer facing agents to streamline customer marketing programs.',
   },
 ];
 
@@ -79,7 +76,16 @@ const portfolio = [
     category: 'LLM citation surface',
     body: 'A machine-first content pipeline for folloze-abm.com focused on rankings, alternatives, comparisons, glossary, methodology pages, and structured citation surfaces.',
     stack: ['Python', 'Schema', 'Vercel', 'Cloudflare'],
-    linkLabel: 'Internal project',
+    links: [
+      {
+        href: 'https://www.folloze-blog.com/',
+        label: 'Folloze Blog',
+      },
+      {
+        href: 'https://www.folloze-abm.com/',
+        label: 'Folloze ABM',
+      },
+    ],
   },
   {
     number: '03',
@@ -92,7 +98,7 @@ const portfolio = [
   },
   {
     number: '04',
-    title: 'Folloze Outbound Engine',
+    title: 'Folloze AI SDR',
     category: 'AI SDR operations',
     body: 'An API-driven outbound loop across Apollo, email reveal, account research, bounded AI personalization, Smartlead enrollment, Salesforce context, Folloze engagement data, and Neon state.',
     stack: ['Apollo', 'Smartlead', 'Salesforce', 'Neon'],
@@ -101,9 +107,9 @@ const portfolio = [
   },
   {
     number: '05',
-    title: 'Post-Call Deal Room Autopilot',
+    title: 'Deal Management Agent',
     category: 'Buyer-safe follow-up',
-    body: 'A seller-reviewed package generator that turns Granola, Zoom, CRM, Gmail, account context, and approved assets into a deal brief, follow-up draft, buyer-safe deal-room plan, and approval checklist.',
+    body: 'Launched a team wide agent that manages pre-call research, post call notes, follow up emails, Salesforce updates, and automated digital deal room creation & updates.',
     stack: ['Granola', 'Zoom', 'Drive', 'Folloze API'],
     linkLabel: 'Local project',
   },
@@ -120,48 +126,39 @@ const portfolio = [
 const career = [
   {
     date: '2026',
-    title: 'Head of Partnerships & Go To Market Engineering, Folloze',
+    company: 'Folloze',
+    title: 'Head of Partnerships & Go To Market Engineering',
     body: 'Leads AI strategy, product roadmap guidance, product marketing support, and forward deployed engineering work. Built tools and agents spanning outbound email, thought leadership, meeting prep, follow-up, demo environments, and digital deal-room creation.',
   },
   {
     date: '2025',
-    title: 'Enterprise Account Manager & Partnership Manager, Folloze',
+    company: 'Folloze',
+    title: 'Enterprise Account Manager & Partnership Manager',
     body: 'Rebuilt the partner program, opened a new SMB agency channel, achieved 111% NRR, renewed 27 of 31 logos, and converted 21 customers to multi-year agreements.',
   },
   {
     date: '2022-2024',
-    title: 'Enterprise AE & Agency Partnerships Manager, Folloze',
+    company: 'Folloze',
+    title: 'Enterprise AE & Agency Partnerships Manager',
     body: 'Owned enterprise new-logo and customer management quota while leading agency, OEM, co-sell, and targeted-event motions. Finished as #2 AE in 2023 with 78% self-sourced revenue.',
   },
   {
     date: '2020-2022',
-    title: 'Account Executive, Banzai / Demio',
+    company: 'Banzai / Demio',
+    title: 'Account Executive',
     body: 'Helped move the GTM plan upstream, upgraded 43 clients from monthly to annual contracts, and finished as the #1 AE every quarter with 130% quota attainment in 2021.',
   },
   {
     date: '2020-2022',
-    title: 'Head of Sales, Modern Stoa',
+    company: 'Modern Stoa',
+    title: 'Head of Sales',
     body: 'Owned the podcast advertising business line, closed $1.23M in ad sales in 2021 across 136 deals, grew the line 400% from 2020, and managed a three-person team.',
   },
-];
-
-const applicationSites = [
   {
-    title: 'Zapier application site',
-    status: 'Live',
-    href: 'https://zapier.trey.work/',
-    body: 'Enterprise AE proof, AI automation thesis, role-fit matrix, and proof-of-work narrative.',
-  },
-  {
-    title: 'Replit application site',
-    status: 'Live',
-    href: 'https://replit.trey.work/#/personal',
-    body: 'Personal story, professional summary, operating-principles response, and resume download flow.',
-  },
-  {
-    title: 'Anthropic application site',
-    status: 'Planned subdomain',
-    body: 'Scaled customer success and AI systems framing. The local build exists, but the public subdomain is not live yet.',
+    date: '2018-2020',
+    company: 'demandDrive',
+    title: 'SDR, Team Lead & Senior Inside Sales Representative',
+    body: 'Grew from SDR into team lead and senior ISR roles in under two years. Helped launch Amazon Key for Business as its first third-party sales partner, led a 5-7 person horizontal SDR team, supported Moltin enterprise GTM work, and earned early recognition including August 2018 MVP, September 2018 company-wide top earner, Presidents Club, and 139% lifetime quota attainment.',
   },
 ];
 
@@ -184,7 +181,7 @@ const links = [
   {
     label: 'X / Twitter',
     href: 'https://x.com/Trey_Harnden',
-    icon: RadioTower,
+    icon: XIcon,
   },
   {
     label: 'treyharnden.com',
@@ -197,12 +194,12 @@ function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="trey.work home">
-        <span>trey.work</span>
+        <span>Trey Harnden</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#roles">Roles</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#applications">Sites</a>
+        <a href="#roles">What I'm looking for</a>
+        <a href="#portfolio">GTME Portfolio</a>
+        <a href="#career">Career History</a>
         <a href="#links">Links</a>
       </nav>
       <a className="button button-small" href={resumePath} download>
@@ -217,13 +214,16 @@ function Hero() {
   return (
     <section id="top" className="hero section-shell">
       <div className="hero-copy">
-        <h1>Customer-facing GTM operator for AI-native companies.</h1>
+        <h1>
+          <span className="hero-nowrap">Customer-facing</span> GTM operator for{' '}
+          <span className="hero-nowrap">AI-native companies.</span>
+        </h1>
         <p className="hero-lede">
           I combine enterprise sales, account management, customer success instincts, and hands-on AI systems building. I am looking for a role where I can help an AI-native company turn technical products into revenue, adoption, customer trust, and repeatable go-to-market infrastructure.
         </p>
         <div className="location-row">
           <MapPin size={18} aria-hidden="true" />
-          <span>Milwaukee today. Ready to relocate to Seattle or San Francisco for the right role.</span>
+          <span>Milwaukee today. Relocating to either Seattle or San Francisco this fall.</span>
         </div>
         <div className="hero-actions">
           <a className="button button-primary" href={resumePath} download>
@@ -268,20 +268,10 @@ function IntroSection() {
       </div>
       <div className="intro-copy">
         <span className="section-label">Brief introduction</span>
-        <h2>Enterprise GTM background, builder habits, and a bias toward useful AI systems.</h2>
+        <h2>Enterprise GTM background with a focus on building AI powered systems.</h2>
         <p>
-          I started in SaaS sales, moved upstream into enterprise revenue work, and kept pulling more of the operating system into my own hands. My strongest lane is the overlap between customer-facing GTM, account-based marketing, digital marketing, technical product fluency, and practical AI workflows that make a team sharper.
+          I started as an SDR and over the course of 4 years grew to be an enterprise account executive. Then I expanded my breadth of GTM skills by running targeted marketing plays, leading ABM efforts from the sales side, and owning indirect business (partnerships, channel, and OEM). Over the last year I have gone headfirst into AI and now lead the Go To Market Engineering efforts & Forward Deployed Engineering team.
         </p>
-        <div className="intro-points">
-          <div>
-            <BriefcaseBusiness size={19} aria-hidden="true" />
-            <span>Enterprise sales and account ownership</span>
-          </div>
-          <div>
-            <Workflow size={19} aria-hidden="true" />
-            <span>AI-assisted GTM systems and forward-deployed work</span>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -289,7 +279,7 @@ function IntroSection() {
 
 function RoleSection() {
   return (
-    <section id="roles" className="section-shell two-column-section">
+    <section id="roles" className="section-shell role-section">
       <div className="section-heading">
         <span className="section-label">What I am looking for</span>
         <h2>A customer-facing role where AI systems, GTM judgment, and revenue ownership meet.</h2>
@@ -311,7 +301,7 @@ function RoleSection() {
 function ProofSection() {
   return (
     <section className="section-shell proof-section">
-      <div className="section-heading centered">
+      <div className="section-heading proof-heading">
         <span className="section-label">Why me</span>
         <h2>Sales proof, customer fluency, and systems-building are the same operating motion.</h2>
       </div>
@@ -334,12 +324,9 @@ function PortfolioSection() {
       <div className="section-shell">
         <div className="portfolio-header">
           <div className="section-heading">
-            <span className="section-label">GTM engineering portfolio</span>
+            <span className="section-label">GTME portfolio</span>
             <h2>Systems built to make sales, marketing, and customer work more repeatable.</h2>
           </div>
-          <p>
-            These projects are the technical proof behind the resume. The pattern is consistent: source ledgers, QA gates, approval boundaries, customer-safe outputs, and deployable artifacts.
-          </p>
         </div>
         <div className="portfolio-grid">
           {portfolio.map((item) => (
@@ -355,7 +342,16 @@ function PortfolioSection() {
                   <span key={stackItem}>{stackItem}</span>
                 ))}
               </div>
-              {item.href ? (
+              {item.links ? (
+                <div className="portfolio-links">
+                  {item.links.map((link) => (
+                    <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+                      {link.label}
+                      <ArrowUpRight size={15} aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
+              ) : item.href ? (
                 <a href={item.href} target="_blank" rel="noreferrer">
                   {item.linkLabel}
                   <ArrowUpRight size={15} aria-hidden="true" />
@@ -373,47 +369,22 @@ function PortfolioSection() {
 
 function CareerSection() {
   return (
-    <section className="section-shell career-section">
+    <section id="career" className="section-shell career-section">
       <div className="section-heading">
-        <span className="section-label">Career narrative</span>
+        <span className="section-label">Career history</span>
         <h2>From SaaS sales into enterprise GTM engineering.</h2>
       </div>
       <div className="timeline">
         {career.map((item) => (
           <article className="timeline-item" key={`${item.date}-${item.title}`}>
-            <span>{item.date}</span>
+            <div className="timeline-meta">
+              <span>{item.date}</span>
+              <small>{item.company}</small>
+            </div>
             <div>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
             </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function ApplicationSites() {
-  return (
-    <section id="applications" className="section-shell application-section">
-      <div className="section-heading">
-        <span className="section-label">Application-site network</span>
-        <h2>The root site for custom role-specific subdomains.</h2>
-      </div>
-      <div className="application-grid">
-        {applicationSites.map((site) => (
-          <article className="application-card" key={site.title}>
-            <span className="status">{site.status}</span>
-            <h3>{site.title}</h3>
-            <p>{site.body}</p>
-            {site.href ? (
-              <a href={site.href} target="_blank" rel="noreferrer">
-                Open site
-                <SquareArrowOutUpRight size={15} aria-hidden="true" />
-              </a>
-            ) : (
-              <span className="muted-link">Subdomain not live yet</span>
-            )}
           </article>
         ))}
       </div>
@@ -429,7 +400,7 @@ function LinksSection() {
           <span className="section-label">Links</span>
           <h2>Public profiles and writing.</h2>
           <p>
-            This site is the baseline. The links below point to the deeper evidence: public repositories, journal notes, LinkedIn history, and the broader personal site.
+            I've been building and managing my life in public for the last five years. Feel free to take a look at some of my writing or project portfolio by clicking any of the links to the right.
           </p>
         </div>
         <div className="link-list">
@@ -452,9 +423,9 @@ function Closing() {
       <div className="section-shell closing-grid">
         <div>
           <Sparkles size={24} aria-hidden="true" />
-          <h2>I want my next role to combine customers, revenue, and AI systems.</h2>
+          <h2>Ready to bring GTM expertise into an AI-native team.</h2>
           <p>
-            I am looking for the company where my enterprise GTM background and hands-on AI systems work compound into the most useful shape.
+            I am looking for a customer-facing role where I can earn trust with buyers, turn technical products into revenue, and build practical AI systems that make the go-to-market motion stronger.
           </p>
         </div>
         <div className="closing-actions">
@@ -476,7 +447,7 @@ function Footer() {
   return (
     <footer className="site-footer">
       <span>trey.work</span>
-      <span>Resume site and application-site index for Trey Harnden.</span>
+      <span>Resume site for Trey Harnden.</span>
     </footer>
   );
 }
@@ -493,7 +464,6 @@ function App() {
         <ProofSection />
         <PortfolioSection />
         <CareerSection />
-        <ApplicationSites />
         <LinksSection />
         <Closing />
       </main>
