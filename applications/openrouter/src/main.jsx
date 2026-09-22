@@ -27,6 +27,17 @@ const proof = [
   { value: '2,515', label: 'GitHub contributions in the year ending Sept. 22, 2026' },
 ];
 
+const milestones = [
+  { date: 'June 2020', dateTime: '2020-06', title: 'Read the GPT-3 paper', detail: 'Started following what large language models could make possible for real work.' },
+  { date: 'November 2020', dateTime: '2020-11', title: 'Started my Second Brain', detail: 'Began organizing my own data, notes, and ideas into a personal knowledge repository.' },
+  { date: 'Nov 30, 2022', dateTime: '2022-11-30', title: 'Joined ChatGPT on launch day', detail: 'Moved from reading about language models to using one directly.' },
+  { date: '2023', dateTime: '2023', title: 'Started building with AI', detail: 'Began using AI to create tools and workflows for my own work.' },
+  { date: 'September 2024', dateTime: '2024-09', title: 'Started coding with Replit Agent', detail: 'Picked it up the day it launched and began building software through natural-language iteration.' },
+  { date: 'Fall 2024', title: 'Built a Trade Ledger research tool', detail: 'Used retrieval and chained prompts to turn 10-K and 10-Q filings into repeatable account dossiers.' },
+  { date: 'Feb to Mar 2026', title: 'Built my own LLM gateway and router', detail: 'First committed it in February, then used it under my harness in March to choose models and track token use.' },
+  { date: 'Today', title: 'Building across sales and AI', detail: 'Use these systems in customer work, content operations, AgentTape, and my own agent harness.' },
+];
+
 const projects = [
   {
     number: '1',
@@ -157,12 +168,16 @@ function Thesis() {
 }
 
 function Origins() {
-  return <section className="or-origins or-shell"><div className="or-section-head"><h2>I've been building toward this for years.</h2><p>My interest in AI started well before it became a sales category. The tools changed. The question stayed the same: how do you turn a powerful model into a useful system?</p></div><div className="or-origins-grid">
-    <div><strong>June 2020</strong><p>Read the GPT-3 paper and began following what large language models could make possible.</p></div>
-    <div><strong>November 2020</strong><p>Started building a personal Second Brain to make my own data and ideas more useful over time.</p></div>
-    <div><strong>February to March 2026</strong><p>First committed my gateway in February, then put it to work as the routing layer for my internal harness in March.</p></div>
-    <div><strong>Today</strong><p>Use the tools daily across customer work, agent memory, content systems, and an independent Mac product.</p></div>
-  </div></section>;
+  return <section className="or-origins or-shell" id="journey" aria-labelledby="or-origins-title">
+    <div className="or-section-head"><h2 id="or-origins-title">I've been building toward this for years.</h2><p>From reading GPT-3 to building my own gateway, I've kept turning new AI capabilities into useful tools.</p></div>
+    <ol className="or-timeline">
+      {milestones.map(milestone => <li className="or-timeline-item" key={milestone.date}>
+        {milestone.dateTime ? <time className="or-timeline-date" dateTime={milestone.dateTime}>{milestone.date}</time> : <span className="or-timeline-date">{milestone.date}</span>}
+        <span className="or-timeline-track" aria-hidden="true" />
+        <div className="or-timeline-content"><h3>{milestone.title}</h3><p>{milestone.detail}</p></div>
+      </li>)}
+    </ol>
+  </section>;
 }
 
 function Work() {
