@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "dev:openrouter": "vite --config applications/openrouter/vite.config.js --host 127.0.0.1",
+    "build:openrouter": "vite build --config applications/openrouter/vite.config.js",
+    "preview:openrouter": "vite preview --config applications/openrouter/vite.config.js --host 127.0.0.1"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -18,4 +21,3 @@
   },
   "devDependencies": {}
 }
-

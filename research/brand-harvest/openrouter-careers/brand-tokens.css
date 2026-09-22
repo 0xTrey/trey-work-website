@@ -1,0 +1,14 @@
+:root {
+  --brand-primary: #C8FF00;
+  --brand-accent: #4D8DFF;
+  --brand-text: #111827;
+  --brand-surface: #FFFFFF;
+  --brand-font-display: gordita, "gordita Fallback", "Plus Jakarta Sans", jakarta, "jakarta Fallback", ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --brand-font-body: "Plus Jakarta Sans", jakarta, "jakarta Fallback", ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --brand-button-radius: 0px;
+  --brand-button-padding: 0px;
+  --brand-button-text: #C8FF00;
+  --brand-button-font-weight: 450;
+  --brand-card-radius: 0px;
+  --brand-card-shadow: none;
+}

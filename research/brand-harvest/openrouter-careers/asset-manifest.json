@@ -1,0 +1,428 @@
+{
+  "requirements": {
+    "status": "ok",
+    "required_logo_roles": [
+      "vendor"
+    ],
+    "checks": {
+      "vendor": {
+        "required": true,
+        "status": "ok",
+        "candidate_count": 2,
+        "provenance": "source page or Brandfetch"
+      },
+      "target": {
+        "required": false,
+        "status": "missing",
+        "candidate_count": 0,
+        "candidates": [],
+        "provenance": []
+      }
+    },
+    "issues": []
+  },
+  "logos": [
+    {
+      "src": "https://openrouter.ai/brand/v2/nav-lockup-sprite.png",
+      "alt": "OpenRouter",
+      "className": "block h-6 w-[131px] object-none object-top dark:object-bottom",
+      "width": 131,
+      "height": 48,
+      "rect": {
+        "x": 32,
+        "y": 15,
+        "width": 131,
+        "height": 24
+      }
+    },
+    {
+      "src": "https://openrouter.ai/brand/v2/openrouter-dark.svg",
+      "alt": "OpenRouter",
+      "className": "hidden h-5 w-auto dark:block",
+      "width": 300,
+      "height": 55,
+      "rect": {
+        "x": 73,
+        "y": 4086,
+        "width": 109,
+        "height": 20
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "https://openrouter.ai/brand/v2/nav-lockup-sprite.png",
+      "alt": "OpenRouter",
+      "className": "block h-6 w-[131px] object-none object-top dark:object-bottom",
+      "width": 131,
+      "height": 48,
+      "rect": {
+        "x": 32,
+        "y": 15,
+        "width": 131,
+        "height": 24
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Microsoft.svg",
+      "alt": "Favicon for microsoft",
+      "className": "h-full w-full object-cover",
+      "width": 129,
+      "height": 129,
+      "rect": {
+        "x": 747,
+        "y": 732,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nvidia.com/&size=256",
+      "alt": "Favicon for nvidia",
+      "className": "h-full w-full object-cover",
+      "width": 48,
+      "height": 48,
+      "rect": {
+        "x": 843,
+        "y": 732,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Meta.png",
+      "alt": "Favicon for meta-llama",
+      "className": "h-full w-full object-cover",
+      "width": 400,
+      "height": 400,
+      "rect": {
+        "x": 938,
+        "y": 732,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/GoogleGemini.svg",
+      "alt": "Favicon for google",
+      "className": "h-full w-full object-cover",
+      "width": 16,
+      "height": 16,
+      "rect": {
+        "x": 1033,
+        "y": 732,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nova.amazon.com/&size=256",
+      "alt": "Favicon for amazon",
+      "className": "h-full w-full object-cover",
+      "width": 192,
+      "height": 192,
+      "rect": {
+        "x": 1129,
+        "y": 732,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/DeepSeek.png",
+      "alt": "Favicon for deepseek",
+      "className": "h-full w-full object-cover",
+      "width": 200,
+      "height": 200,
+      "rect": {
+        "x": 785,
+        "y": 781,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Qwen.png",
+      "alt": "Favicon for qwen",
+      "className": "h-full w-full object-cover",
+      "width": 200,
+      "height": 200,
+      "rect": {
+        "x": 881,
+        "y": 781,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/MoonshotAI.png",
+      "alt": "Favicon for moonshotai",
+      "className": "h-full w-full object-cover",
+      "width": 1024,
+      "height": 1024,
+      "rect": {
+        "x": 976,
+        "y": 781,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://minimaxi.com/&size=256",
+      "alt": "Favicon for minimax",
+      "className": "h-full w-full object-cover",
+      "width": 32,
+      "height": 32,
+      "rect": {
+        "x": 1071,
+        "y": 781,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://z.ai/&size=256",
+      "alt": "Favicon for z-ai",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 1167,
+        "y": 781,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Mistral.png",
+      "alt": "Favicon for mistralai",
+      "className": "h-full w-full object-cover",
+      "width": 191,
+      "height": 135,
+      "rect": {
+        "x": 747,
+        "y": 831,
+        "width": 15,
+        "height": 10
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Anthropic.svg",
+      "alt": "Favicon for anthropic",
+      "className": "h-full w-full object-cover",
+      "width": 512,
+      "height": 512,
+      "rect": {
+        "x": 843,
+        "y": 829,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/OpenAI.svg",
+      "alt": "Favicon for openai",
+      "className": "h-full w-full object-cover",
+      "width": 280,
+      "height": 280,
+      "rect": {
+        "x": 938,
+        "y": 829,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/GoogleAIStudio.svg",
+      "alt": "Favicon for google ai studio",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 258,
+      "rect": {
+        "x": 1033,
+        "y": 829,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://x.ai/&size=256",
+      "alt": "Favicon for x-ai",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 1129,
+        "y": 829,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Cohere.png",
+      "alt": "Favicon for cohere",
+      "className": "h-full w-full object-cover",
+      "width": 280,
+      "height": 280,
+      "rect": {
+        "x": 785,
+        "y": 877,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://huggingface.co/&size=256",
+      "alt": "Favicon for huggingface",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 881,
+        "y": 877,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Perplexity.png",
+      "alt": "Favicon for perplexity",
+      "className": "h-full w-full object-cover",
+      "width": 512,
+      "height": 512,
+      "rect": {
+        "x": 976,
+        "y": 877,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nousresearch.com/&size=256",
+      "alt": "Favicon for nousresearch",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 1071,
+        "y": 877,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.together.ai/&size=256",
+      "alt": "Favicon for together",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 1167,
+        "y": 877,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://morphllm.com&size=256",
+      "alt": "Favicon for morph",
+      "className": "h-full w-full object-cover",
+      "width": 102,
+      "height": 102,
+      "rect": {
+        "x": 747,
+        "y": 925,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://inflection.ai/&size=256",
+      "alt": "Favicon for inflection",
+      "className": "h-full w-full object-cover",
+      "width": 180,
+      "height": 180,
+      "rect": {
+        "x": 843,
+        "y": 925,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.liquid.ai/&size=256",
+      "alt": "Favicon for liquid",
+      "className": "h-full w-full object-cover",
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 938,
+        "y": 925,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/images/icons/Inception.svg",
+      "alt": "Favicon for inception",
+      "className": "h-full w-full object-cover",
+      "width": 354,
+      "height": 354,
+      "rect": {
+        "x": 1033,
+        "y": 925,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.arcee.ai&size=256",
+      "alt": "Favicon for arcee-ai",
+      "className": "h-full w-full object-cover",
+      "width": 180,
+      "height": 180,
+      "rect": {
+        "x": 1129,
+        "y": 925,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "src": "https://openrouter.ai/brand/v2/openrouter-dark.svg",
+      "alt": "OpenRouter",
+      "className": "hidden h-5 w-auto dark:block",
+      "width": 300,
+      "height": 55,
+      "rect": {
+        "x": 73,
+        "y": 4086,
+        "width": 109,
+        "height": 20
+      }
+    }
+  ],
+  "background_images": [],
+  "brandfetch_logos": [],
+  "screenshots": {
+    "desktop_full": {
+      "path": "research/brand-harvest/openrouter-careers/screenshots/homepage-desktop-full.png",
+      "width": 1425,
+      "height": 4578,
+      "clipped": false
+    },
+    "mobile_full": {
+      "path": "research/brand-harvest/openrouter-careers/screenshots/homepage-mobile-full.png",
+      "width": 390,
+      "height": 6490,
+      "clipped": false
+    }
+  },
+  "manual_screenshots": [
+    {
+      "source": "/var/folders/3j/0zw35hjd0p38rbqnvffx48bh0000gn/T/TemporaryItems/NSIRD_screencaptureui_36W2qg/Screenshot 2026-09-22 at 3.31.14 PM.png",
+      "status": "copied",
+      "path": "research/brand-harvest/openrouter-careers/screenshots/manual-1.png"
+    }
+  ]
+}
