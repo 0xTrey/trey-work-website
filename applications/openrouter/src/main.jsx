@@ -3,11 +3,14 @@ import { createRoot } from 'react-dom/client';
 import {
   ArrowDown,
   ArrowUpRight,
+  BookOpen,
   BriefcaseBusiness,
   ChevronDown,
   Code2,
   Github,
+  Globe2,
   Layers3,
+  Linkedin,
   Mail,
   Menu,
   Route,
@@ -16,9 +19,8 @@ import {
 import './styles.css';
 
 const enterpriseRole = 'https://jobs.ashbyhq.com/openrouter/34db850d-579f-4b4c-9827-76bc712b1a41';
-const standardRole = 'https://jobs.ashbyhq.com/openrouter/22d85a56-5500-40a5-9913-c98558d77f41';
 const githubProfile = 'https://github.com/0xTrey';
-const resume = '/resume/Trey-Harnden-Resume-June-2026.pdf';
+const resume = '/resume/Trey-Harnden-OpenRouter-Enterprise-AE.pdf';
 
 const proof = [
   { value: '20+', label: 'six-figure new-logo deals at Folloze' },
@@ -219,7 +221,7 @@ function GitHubShowcase() {
 }
 
 function Closing() {
-  return <section className="or-closing"><div className="or-shell or-closing-grid"><div><h2>Let's build the enterprise motion for the model layer.</h2><p>I would like to talk about the Enterprise Account Executive role, the customers OpenRouter wants to win, and what a seller who builds could help unlock.</p><div className="or-closing-actions"><a className="or-button or-button-primary" href="mailto:harnden.trey@gmail.com?subject=OpenRouter%20Enterprise%20AE"><Mail size={17}/> Email Trey</a><External href={resume} className="or-button or-button-quiet">View résumé <ArrowUpRight size={17}/></External></div></div><div className="or-closing-links"><External href={enterpriseRole}>Enterprise AE posting <ArrowUpRight size={16}/></External><External href={standardRole}>Account Executive posting <ArrowUpRight size={16}/></External><External href="https://replit.trey.work">Replit application <ArrowUpRight size={16}/></External><External href="https://www.linkedin.com/in/treyharnden/">LinkedIn profile <ArrowUpRight size={16}/></External><External href="https://harnden.notion.site/My-Second-Brain-a2bcac8bd3424b6bbd838c709dc1bb73">Public writing & Second Brain <ArrowUpRight size={16}/></External></div></div></section>;
+  return <section className="or-closing"><div className="or-shell or-closing-grid"><div><h2>Let's build the enterprise motion for the model layer.</h2><p>I would like to talk about the Enterprise Account Executive role, the customers OpenRouter wants to win, and what a seller who builds could help unlock.</p><div className="or-closing-actions"><a className="or-button or-button-primary" href="mailto:harnden.trey@gmail.com?subject=OpenRouter%20Enterprise%20AE"><Mail size={17}/> Email Trey</a><External href={resume} className="or-button or-button-quiet">View OpenRouter résumé <ArrowUpRight size={17}/></External></div></div><div className="or-closing-links" aria-label="More about Trey"><External href="https://treyharnden.com"><Globe2 size={19}/><span>Website</span><ArrowUpRight size={14}/></External><External href="https://www.linkedin.com/in/treyharnden/"><Linkedin size={19}/><span>LinkedIn</span><ArrowUpRight size={14}/></External><External href="https://x.com/Trey_Harnden"><span className="or-x-icon" aria-hidden="true">𝕏</span><span>X</span><ArrowUpRight size={14}/></External><External href="https://harnden.notion.site/My-Second-Brain-a2bcac8bd3424b6bbd838c709dc1bb73"><BookOpen size={19}/><span>Second Brain</span><ArrowUpRight size={14}/></External></div></div></section>;
 }
 
 function App() {

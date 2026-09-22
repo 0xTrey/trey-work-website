@@ -43,6 +43,14 @@ npm run preview:openrouter
 
 The application build writes to `dist-openrouter/`. That folder is suitable for a separate static hosting project with `openrouter.trey.work` as its custom domain after the page is approved. No DNS or live hosting change is part of this draft.
 
+The OpenRouter page links to a one-page Enterprise AE résumé at `public/resume/Trey-Harnden-OpenRouter-Enterprise-AE.pdf`. Its editable source is `applications/openrouter/build_resume.py`; regenerate it with a Python environment that has ReportLab installed:
+
+```bash
+python3 applications/openrouter/build_resume.py
+```
+
+The earlier June 2026 PDF remains available for the root site. Confirm the exact current Folloze title and all résumé claims with Trey before using the OpenRouter PDF in a submitted application.
+
 The public design reference is captured in `research/brand-harvest/openrouter-home/` and `research/brand-harvest/openrouter-careers/`. The page translates OpenRouter's dark, lime-accented visual language into an independent candidate site. It uses OpenRouter's published wordmark with attribution in the footer.
 
 Content sources: OpenRouter's current [Enterprise Account Executive](https://jobs.ashbyhq.com/openrouter/34db850d-579f-4b4c-9827-76bc712b1a41) and [Account Executive](https://jobs.ashbyhq.com/openrouter/22d85a56-5500-40a5-9913-c98558d77f41) postings; the existing public résumé content in this repository; the public project links on the page; and Trey's application brief. The timeline uses [OpenAI's November 30, 2022 ChatGPT announcement](https://openai.com/index/chatgpt/) and [Replit's September 2024 Agent announcement](https://replit.com/blog/introducing-replit-agent) for launch timing. Trey's same-day signup and Agent use, the 2020 and 2023 milestones, and the March 2026 routing milestone are his account and should be confirmed before publication. The Trade Ledger entry reflects the fall 2024 prototype described in his Replit application materials. The private LLM gateway's first local commit was February 12, 2026.
