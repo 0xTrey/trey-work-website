@@ -145,7 +145,7 @@ function Proof() {
 
 function Fit() {
   return <section className="or-section or-shell" id="fit">
-    <div className="or-section-head or-fit-head"><h2>The enterprise sale is where my two tracks meet.</h2><p>OpenRouter needs sellers who can handle long, multistakeholder cycles and explain a technical platform to both builders and executives. I have done the commercial work and built with the underlying tools.</p></div>
+    <div className="or-section-head or-fit-head"><h2>OpenRouter is where my two tracks meet.</h2><p>OpenRouter needs sellers who can handle long, multistakeholder cycles and explain a technical platform to both builders and executives. I have done the commercial work and built with the underlying tools.</p></div>
     <div className="or-fit-grid">
       <article className="or-fit-card"><BriefcaseBusiness size={23} /><h3>Own the deal</h3><p>At Folloze, I closed 20+ six-figure new-logo deals, became the #2 AE in 2023, and self-sourced 78% of that year's revenue. I know how to create a path from discovery through procurement and signature.</p></article>
       <article className="or-fit-card"><Layers3 size={23} /><h3>Grow the account</h3><p>In 2025, as an enterprise account manager, I managed a $3.57M TCV book to 111% net revenue retention. I renewed 27 of 31 customers and converted 21 to multiyear agreements by staying close to adoption and executive value.</p></article>
