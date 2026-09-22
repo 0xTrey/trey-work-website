@@ -124,10 +124,6 @@ function Hero() {
           <a className="or-button or-button-primary" href="#fit">See the case <ArrowDown size={17} /></a>
           <External className="or-button or-button-quiet" href={enterpriseRole}>The Enterprise AE role <ArrowUpRight size={17} /></External>
         </div>
-        <div className="or-hero-foot">
-          <span><span className="or-status-dot" /> Application by Trey Harnden</span>
-          <span>Milwaukee, Wisconsin · Open to remote US</span>
-        </div>
       </div>
       <div className="or-hero-visual" aria-label="Trey Harnden portrait and enterprise AI routing illustration">
         <div className="or-orbit orbit-one" /><div className="or-orbit orbit-two" />
