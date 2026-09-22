@@ -4,7 +4,6 @@ import {
   ArrowDown,
   ArrowUpRight,
   BriefcaseBusiness,
-  Check,
   ChevronDown,
   Code2,
   Github,
@@ -143,7 +142,6 @@ function Fit() {
       <article className="or-fit-card"><Layers3 size={23} /><h3>Grow the account</h3><p>In 2025, as an enterprise account manager, I managed a $3.57M TCV book to 111% net revenue retention. I renewed 27 of 31 customers and converted 21 to multiyear agreements by staying close to adoption and executive value.</p></article>
       <article className="or-fit-card"><Code2 size={23} /><h3>Speak the buyer's language</h3><p>I've been building software with AI since 2023, before Karpathy coined "vibe coding." I used what is now OpenClaw when it was still called Clawdbot, and built my own LLM gateway and router in March 2026 to route work across models and use tokens more efficiently.</p></article>
     </div>
-    <div className="or-fit-note"><Check size={17} /><span>My experience also spans customer success and partnerships, the teams an enterprise AE needs to work with after the first deal.</span></div>
   </section>;
 }
 
