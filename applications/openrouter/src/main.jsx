@@ -42,7 +42,7 @@ const projects = [
     number: '2',
     name: 'Personal LLM gateway',
     type: 'Private infrastructure',
-    description: 'An OpenAI-compatible client with profiles for local and cloud models, provider fallback choices, and usage tracking. The first commit dates to February 2026. It gives my internal harness a routing layer I can control.',
+    description: 'An OpenAI-compatible client with profiles for local and cloud models, provider fallback choices, and usage tracking. I first committed it in February 2026 and put it to work as the routing layer for my harness that March.',
     tags: ['Model routing', 'OpenAI-compatible', 'Usage telemetry'],
     note: 'Private implementation. Architecture available in conversation.',
   },
@@ -107,7 +107,7 @@ function Hero() {
     <section className="or-hero or-shell" id="top">
       <div className="or-hero-copy">
         <h1>I know what it takes to make AI infrastructure an <em>enterprise decision.</em></h1>
-        <p className="or-hero-lede">I have sold and expanded complex B2B accounts, led partnerships, worked across customer success, and built the AI systems that make me a more credible seller. I want to bring that combination to OpenRouter as an Enterprise Account Executive.</p>
+        <p className="or-hero-lede">I've sold and expanded complex B2B accounts, led partnerships, worked across customer success, and now lead solution engineering and go-to-market engineering (GTME). I also build the AI systems behind my work, and want to bring that combination to OpenRouter as an Enterprise Account Executive.</p>
         <div className="or-hero-actions">
           <a className="or-button or-button-primary" href="#fit">See the case <ArrowDown size={17} /></a>
           <External className="or-button or-button-quiet" href={enterpriseRole}>The Enterprise AE role <ArrowUpRight size={17} /></External>
@@ -121,7 +121,7 @@ function Hero() {
         <div className="or-orbit orbit-one" /><div className="or-orbit orbit-two" />
         <div className="or-portrait-wrap"><img src="/images/trey-headshot.jpg" alt="Trey Harnden" /></div>
         <div className="or-floating-card or-floating-top"><Route size={19} /><span>GTM judgment<br /><strong>+ builder fluency</strong></span></div>
-        <div className="or-floating-card or-floating-bottom"><span className="or-mini-line" /><span>Enterprise sales<br /><strong>since 2018</strong></span></div>
+        <div className="or-floating-card or-floating-bottom"><span className="or-mini-line" /><span>AI builder<br /><strong>since 2023</strong></span></div>
       </div>
     </section>
   );
@@ -141,7 +141,7 @@ function Fit() {
     <div className="or-fit-grid">
       <article className="or-fit-card"><BriefcaseBusiness size={23} /><h3>Own the deal</h3><p>At Folloze, I closed 20+ six-figure new-logo deals, became the #2 AE in 2023, and self-sourced 78% of that year's revenue. I know how to create a path from discovery through procurement and signature.</p></article>
       <article className="or-fit-card"><Layers3 size={23} /><h3>Grow the account</h3><p>In 2025, as an enterprise account manager, I managed a $3.57M TCV book to 111% net revenue retention. I renewed 27 of 31 customers and converted 21 to multiyear agreements by staying close to adoption and executive value.</p></article>
-      <article className="or-fit-card"><Code2 size={23} /><h3>Speak the buyer's language</h3><p>I run my own model gateway and agent harness, build with APIs and Replit, used Clawdbot before it became OpenClaw, and now use Hermes. I can discuss routing, reliability, data controls, and cost from direct experience.</p></article>
+      <article className="or-fit-card"><Code2 size={23} /><h3>Speak the buyer's language</h3><p>I've been building software with AI since 2023, before Karpathy coined "vibe coding." I used what is now OpenClaw when it was still called Clawdbot, and built my own LLM gateway and router in March 2026 to route work across models and use tokens more efficiently.</p></article>
     </div>
     <div className="or-fit-note"><Check size={17} /><span>My experience also spans customer success and partnerships, the teams an enterprise AE needs to work with after the first deal.</span></div>
   </section>;
@@ -162,7 +162,7 @@ function Origins() {
   return <section className="or-origins or-shell"><div className="or-section-head"><h2>I've been building toward this for years.</h2><p>My interest in AI started well before it became a sales category. The tools changed. The question stayed the same: how do you turn a powerful model into a useful system?</p></div><div className="or-origins-grid">
     <div><strong>June 2020</strong><p>Read the GPT-3 paper and began following what large language models could make possible.</p></div>
     <div><strong>November 2020</strong><p>Started building a personal Second Brain to make my own data and ideas more useful over time.</p></div>
-    <div><strong>February 2026</strong><p>First commit to my own gateway for local and cloud models, part of the internal harness I still use.</p></div>
+    <div><strong>February to March 2026</strong><p>First committed my gateway in February, then put it to work as the routing layer for my internal harness in March.</p></div>
     <div><strong>Today</strong><p>Use the tools daily across customer work, agent memory, content systems, and an independent Mac product.</p></div>
   </div></section>;
 }
