@@ -30,12 +30,17 @@ const proof = [
 ];
 
 const milestones = [
-  { date: 'June 2020', dateTime: '2020-06', title: 'Read the GPT-3 paper', detail: 'Started following what large language models could make possible for real work.' },
+  { date: 'June 2020', dateTime: '2020-06', title: 'Read the GPT-3 white paper', detail: 'Started following what large language models could make possible for real work.' },
   { date: 'November 2020', dateTime: '2020-11', title: 'Started my Second Brain', detail: 'Began organizing my own data, notes, and ideas into a personal knowledge repository.' },
   { date: 'Nov 30, 2022', dateTime: '2022-11-30', title: 'Joined ChatGPT on launch day', detail: 'Moved from reading about language models to using one directly.' },
   { date: '2023', dateTime: '2023', title: 'Started building with AI', detail: 'Began using AI to create tools and workflows for my own work.' },
   { date: 'September 2024', dateTime: '2024-09', title: 'Started coding with Replit Agent', detail: 'Picked it up the day it launched and began building software through natural-language iteration.' },
   { date: 'Fall 2024', title: 'Built a Trade Ledger research tool', detail: 'Used retrieval and chained prompts to turn 10-K and 10-Q filings into repeatable account dossiers.' },
+  { date: 'Jan to Feb 2025', title: 'Built personal software on Replit', detail: 'Made a fasting tracker and a Pacific Northwest snow report with resort weather, snowfall, and lift status.' },
+  { date: 'February 2025', dateTime: '2025-02', title: 'Picked up Claude Code', detail: 'Started using it the week Anthropic introduced it and got hooked on building with coding agents.' },
+  { date: 'June 2025', dateTime: '2025-06', title: 'Accepted into Gauntlet AI', detail: 'Earned a place in its AI engineering program while continuing to build alongside my sales work.' },
+  { date: '2025', dateTime: '2025', title: 'Started building a company brain', detail: 'Used custom GPTs and ChatGPT Projects to organize shared context and turn scattered knowledge into reusable work.' },
+  { date: 'December 2025', dateTime: '2025-12', title: 'Started using Clawdbot', detail: 'Put an agent to work before the project became OpenClaw.' },
   { date: 'Feb to Mar 2026', title: 'Built my own LLM gateway and router', detail: 'First committed it in February, then used it under my harness in March to choose models and track token use.' },
   { date: 'Today', title: 'Building across sales and AI', detail: 'Use these systems in customer work, content operations, AgentTape, and my own agent harness.' },
 ];
@@ -156,7 +161,7 @@ function Fit() {
 
 function Thesis() {
   return <section className="or-thesis" id="perspective"><div className="or-shell or-thesis-grid">
-    <div className="or-thesis-copy"><h2>Enterprises will own the harness. Models will come and go.</h2><p>The company's memory, skills, permissions, tools, and evaluations are its operating layer. It should control that layer even when an outside provider supplies the model.</p><p>Some workloads will earn private inference. Others will need frontier models or burst capacity. Every external request needs an explicit decision about provider, data policy, performance, and cost. I built a small gateway for that reason. OpenRouter makes the external model portfolio easier to govern at enterprise scale.</p><div className="or-thesis-links"><a href="/perspective/" className="or-text-link">Read my enterprise AI thesis <ArrowUpRight size={17} /></a><External href="https://openrouter.ai/enterprise" className="or-text-link or-text-link-muted">OpenRouter for enterprise <ArrowUpRight size={17} /></External></div></div>
+    <div className="or-thesis-copy"><h2>Enterprises will own the harness. Models will come and go.</h2><p>The company's memory, skills, permissions, tools, and evaluations are its operating layer. It should control that layer even when an outside provider supplies the model.</p><p>Some workloads will earn private inference. Others will need frontier models or burst capacity. Every external request needs an explicit decision about provider, data policy, performance, and cost. I built a small gateway for that reason. OpenRouter makes the external model portfolio easier to govern at enterprise scale.</p><div className="or-thesis-links"><a href="/perspective/" className="or-text-link">Read my enterprise AI thesis <ArrowUpRight size={17} /></a></div></div>
     <div className="or-route-panel" aria-label="Illustration: teams and agents connect through a routing layer to multiple model providers">
       <div className="or-route-panel-head"><span className="or-terminal-dots"><i/><i/><i/></span><span>one company, several compute paths</span><Route size={17}/></div>
       <div className="or-route-track"><div className="or-route-node"><span>1</span><strong>Company harness</strong><small>memory · skills · policy</small></div><div className="or-route-connector"><i/></div><div className="or-route-node active"><span>2</span><strong>Routing layer</strong><small>choice · privacy · cost</small></div><div className="or-route-connector"><i/></div><div className="or-route-node"><span>3</span><strong>Model capacity</strong><small>private · cloud · frontier</small></div></div>
@@ -167,7 +172,7 @@ function Thesis() {
 
 function Origins() {
   return <section className="or-origins or-shell" id="journey" aria-labelledby="or-origins-title">
-    <div className="or-section-head"><h2 id="or-origins-title">I've been building toward this for years.</h2><p>From reading GPT-3 to building my own gateway, I've kept turning new AI capabilities into useful tools.</p></div>
+    <div className="or-section-head"><h2 id="or-origins-title">I've been building toward this for years.</h2><p>From reading the GPT-3 white paper to building my own model gateway, I've kept turning new AI capabilities into tools I actually use.</p></div>
     <ol className="or-timeline">
       {milestones.map(milestone => <li className="or-timeline-item" key={milestone.date}>
         {milestone.dateTime ? <time className="or-timeline-date" dateTime={milestone.dateTime}>{milestone.date}</time> : <span className="or-timeline-date">{milestone.date}</span>}
