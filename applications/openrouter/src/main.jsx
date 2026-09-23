@@ -36,7 +36,8 @@ const milestones = [
   { date: 'Jan to Feb 2025', title: 'Built apps, picked up Claude Code', detail: 'Made a fasting tracker and a PNW snow and lift report on Replit, then started Claude Code the week it launched.' },
   { date: 'June 2025', dateTime: '2025-06', title: 'Accepted into Gauntlet AI', detail: 'Earned a place in its AI engineering program while continuing to build alongside my sales work.' },
   { date: '2025', dateTime: '2025', title: 'Started a company brain and used Clawdbot', detail: 'Organized company context with custom GPTs and ChatGPT Projects, then put Clawdbot to work in December.' },
-  { date: 'Feb to Mar 2026', title: 'Built my own LLM gateway and router', detail: 'First committed it in February, then used it under my harness in March to choose models and track token use.' },
+  { date: 'Early 2026', title: 'Built my own LLM gateway and router', detail: 'First committed it in February, then used it under my harness in March to choose models and track token use.' },
+  { date: 'Today', title: 'Leading AI and GTME at Folloze', detail: 'Run AI initiatives, build tools, and sell AI projects to enterprise accounts including Zoom, Equinix, SailPoint, and others.' },
 ];
 
 const projects = [
