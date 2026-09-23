@@ -30,19 +30,13 @@ const proof = [
 ];
 
 const milestones = [
-  { date: 'June 2020', dateTime: '2020-06', title: 'Read the GPT-3 white paper', detail: 'Started following what large language models could make possible for real work.' },
-  { date: 'November 2020', dateTime: '2020-11', title: 'Started my Second Brain', detail: 'Began organizing my own data, notes, and ideas into a personal knowledge repository.' },
-  { date: 'Nov 30, 2022', dateTime: '2022-11-30', title: 'Joined ChatGPT on launch day', detail: 'Moved from reading about language models to using one directly.' },
-  { date: '2023', dateTime: '2023', title: 'Started building with AI', detail: 'Began using AI to create tools and workflows for my own work.' },
-  { date: 'September 2024', dateTime: '2024-09', title: 'Started coding with Replit Agent', detail: 'Picked it up the day it launched and began building software through natural-language iteration.' },
-  { date: 'Fall 2024', title: 'Built a Trade Ledger research tool', detail: 'Used retrieval and chained prompts to turn 10-K and 10-Q filings into repeatable account dossiers.' },
-  { date: 'Jan to Feb 2025', title: 'Built personal software on Replit', detail: 'Made a fasting tracker and a Pacific Northwest snow report with resort weather, snowfall, and lift status.' },
-  { date: 'February 2025', dateTime: '2025-02', title: 'Picked up Claude Code', detail: 'Started using it the week Anthropic introduced it and got hooked on building with coding agents.' },
+  { date: '2020', dateTime: '2020', title: 'Read GPT-3, built my Second Brain', detail: 'Read the GPT-3 white paper in June and started a personal knowledge repository that November.' },
+  { date: '2022 to 2023', title: 'Joined ChatGPT and started building', detail: 'Signed up on launch day, then made AI part of my daily work and began building tools in 2023.' },
+  { date: '2024', dateTime: '2024', title: 'Started coding with Replit Agent', detail: 'Picked it up on launch day and built a Trade Ledger tool that turns 10-K and 10-Q filings into account research.' },
+  { date: 'Jan to Feb 2025', title: 'Built apps, picked up Claude Code', detail: 'Made a fasting tracker and a PNW snow and lift report on Replit, then started Claude Code the week it launched.' },
   { date: 'June 2025', dateTime: '2025-06', title: 'Accepted into Gauntlet AI', detail: 'Earned a place in its AI engineering program while continuing to build alongside my sales work.' },
-  { date: '2025', dateTime: '2025', title: 'Started building a company brain', detail: 'Used custom GPTs and ChatGPT Projects to organize shared context and turn scattered knowledge into reusable work.' },
-  { date: 'December 2025', dateTime: '2025-12', title: 'Started using Clawdbot', detail: 'Put an agent to work before the project became OpenClaw.' },
+  { date: '2025', dateTime: '2025', title: 'Started a company brain and used Clawdbot', detail: 'Organized company context with custom GPTs and ChatGPT Projects, then put Clawdbot to work in December.' },
   { date: 'Feb to Mar 2026', title: 'Built my own LLM gateway and router', detail: 'First committed it in February, then used it under my harness in March to choose models and track token use.' },
-  { date: 'Today', title: 'Building across sales and AI', detail: 'Use these systems in customer work, content operations, AgentTape, and my own agent harness.' },
 ];
 
 const projects = [
