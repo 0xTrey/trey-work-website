@@ -31,7 +31,7 @@ npm run dev
 npm run build
 ```
 
-## OpenRouter application draft
+## OpenRouter application
 
 The Enterprise Account Executive application lives in `applications/openrouter/`. It has its own Vite entry point, so the root résumé site and the application can be built separately.
 
@@ -41,7 +41,9 @@ npm run build:openrouter
 npm run preview:openrouter
 ```
 
-The application build writes to `dist-openrouter/`, including the linked essay at `/perspective/`. That folder is suitable for a separate static hosting project with `openrouter.trey.work` as its custom domain after the page is approved. No DNS or live hosting change is part of this draft.
+The application build writes to `dist-openrouter/`, including the linked essay at `/perspective/`. The owning repository is `0xTrey/trey-work-website`. Cloudflare Workers Static Assets serves the production build using `applications/openrouter/wrangler.jsonc`. The Worker has no runtime bindings or secrets.
+
+To release the application, run `npm run deploy:openrouter` from this repo. On Trey's Mac, the shell's `CLOUDFLARE_API_TOKEN` lacks Workers deployment access; run `env -u CLOUDFLARE_API_TOKEN npm run deploy:openrouter` to use Wrangler's authenticated OAuth session. Verify the main page, `/perspective/`, the OpenRouter résumé PDF, and the brand and headshot assets at the public hostname after each release. Check that an unknown path returns 404. To revert, run `wrangler rollback --config applications/openrouter/wrangler.jsonc` and select the preceding version, then repeat those public checks.
 
 The OpenRouter page links to a one-page Enterprise AE résumé at `public/resume/Trey-Harnden-OpenRouter-Enterprise-AE.pdf`. Its editable source is `applications/openrouter/build_resume.py`; regenerate it with a Python environment that has ReportLab installed:
 
