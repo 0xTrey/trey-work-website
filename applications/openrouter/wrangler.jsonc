@@ -4,6 +4,10 @@
   "workers_dev": true,
   "routes": [
     {
+      "pattern": "openrouter.trey.work",
+      "custom_domain": true
+    },
+    {
       "pattern": "openroute.trey.work",
       "custom_domain": true
     }

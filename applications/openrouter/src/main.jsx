@@ -107,7 +107,7 @@ function Header() {
           <a href="#work" onClick={() => setOpen(false)}>Selected work</a>
           <a href="#github" onClick={() => setOpen(false)}>GitHub</a>
           <a href="#perspective" onClick={() => setOpen(false)}>Perspective</a>
-          <a className="or-nav-contact" href="mailto:harnden.trey@gmail.com?subject=OpenRouter%20Enterprise%20AE" onClick={() => setOpen(false)}>Contact Trey <ArrowUpRight size={15} /></a>
+          <a className="or-nav-contact" href="mailto:harnden.trey@gmail.com?subject=OpenRouter%20Enterprise%20AE" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Email Trey <ArrowUpRight size={15} /></a>
         </nav>
       </div>
     </header>
@@ -217,7 +217,7 @@ function GitHubShowcase() {
 }
 
 function Closing() {
-  return <section className="or-closing"><div className="or-shell or-closing-grid"><div><h2>Let's build the enterprise motion for the model layer.</h2><p>I would like to talk about the Enterprise Account Executive role, the customers OpenRouter wants to win, and what a seller who builds could help unlock.</p><div className="or-closing-actions"><a className="or-button or-button-primary" href="mailto:harnden.trey@gmail.com?subject=OpenRouter%20Enterprise%20AE"><Mail size={17}/> Email Trey</a><External href={resume} className="or-button or-button-quiet">View OpenRouter résumé <ArrowUpRight size={17}/></External></div></div><div className="or-closing-links" aria-label="More about Trey"><External href="https://treyharnden.com"><Globe2 size={19}/><span>Personal Website</span><ArrowUpRight size={14}/></External><External href="https://www.linkedin.com/in/treyharnden/"><Linkedin size={19}/><span>LinkedIn</span><ArrowUpRight size={14}/></External><External href="https://x.com/Trey_Harnden"><span className="or-x-icon" aria-hidden="true">𝕏</span><span>X</span><ArrowUpRight size={14}/></External><External href="https://harnden.notion.site/My-Second-Brain-a2bcac8bd3424b6bbd838c709dc1bb73"><BookOpen size={19}/><span>Second Brain</span><ArrowUpRight size={14}/></External></div></div></section>;
+  return <section className="or-closing"><div className="or-shell or-closing-grid"><h2>Let's build the enterprise motion for the model layer.</h2><div className="or-closing-copy"><p>I would like to talk about the Enterprise Account Executive role, the customers OpenRouter wants to win, and what a seller who builds could help unlock.</p><div className="or-closing-actions"><a className="or-button or-button-primary" href="mailto:harnden.trey@gmail.com?subject=OpenRouter%20Enterprise%20AE" target="_blank" rel="noopener noreferrer"><Mail size={17}/> Email Trey</a><External href={resume} className="or-button or-button-quiet">View OpenRouter résumé <ArrowUpRight size={17}/></External></div></div><div className="or-closing-links" aria-label="More about Trey"><External href="https://treyharnden.com"><Globe2 size={19}/><span>Personal Website</span><ArrowUpRight size={14}/></External><External href="https://www.linkedin.com/in/treyharnden/"><Linkedin size={19}/><span>LinkedIn</span><ArrowUpRight size={14}/></External><External href="https://x.com/Trey_Harnden"><span className="or-x-icon" aria-hidden="true">𝕏</span><span>X</span><ArrowUpRight size={14}/></External><External href="https://harnden.notion.site/My-Second-Brain-a2bcac8bd3424b6bbd838c709dc1bb73"><BookOpen size={19}/><span>Second Brain</span><ArrowUpRight size={14}/></External></div></div></section>;
 }
 
 function App() {
