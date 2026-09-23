@@ -41,7 +41,7 @@ npm run build:openrouter
 npm run preview:openrouter
 ```
 
-The application build writes to `dist-openrouter/`, including the linked essay at `/perspective/`. The owning repository is `0xTrey/trey-work-website`. Cloudflare Workers Static Assets serves the production build using `applications/openrouter/wrangler.jsonc`. The Worker has no runtime bindings or secrets.
+The application build writes to `dist-openrouter/`, including the linked essay at `/perspective/`. The owning repository is `0xTrey/trey-work-website`. Cloudflare Workers Static Assets serves the production build at `https://openroute.trey.work/` using `applications/openrouter/wrangler.jsonc`. The Worker has no runtime bindings or secrets.
 
 To release the application, run `npm run deploy:openrouter` from this repo. On Trey's Mac, the shell's `CLOUDFLARE_API_TOKEN` lacks Workers deployment access; run `env -u CLOUDFLARE_API_TOKEN npm run deploy:openrouter` to use Wrangler's authenticated OAuth session. Verify the main page, `/perspective/`, the OpenRouter résumé PDF, and the brand and headshot assets at the public hostname after each release. Check that an unknown path returns 404. To revert, run `wrangler rollback --config applications/openrouter/wrangler.jsonc` and select the preceding version, then repeat those public checks.
 
