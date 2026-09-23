@@ -41,7 +41,7 @@ npm run build:openrouter
 npm run preview:openrouter
 ```
 
-The application build writes to `dist-openrouter/`. That folder is suitable for a separate static hosting project with `openrouter.trey.work` as its custom domain after the page is approved. No DNS or live hosting change is part of this draft.
+The application build writes to `dist-openrouter/`, including the linked essay at `/perspective/`. That folder is suitable for a separate static hosting project with `openrouter.trey.work` as its custom domain after the page is approved. No DNS or live hosting change is part of this draft.
 
 The OpenRouter page links to a one-page Enterprise AE résumé at `public/resume/Trey-Harnden-OpenRouter-Enterprise-AE.pdf`. Its editable source is `applications/openrouter/build_resume.py`; regenerate it with a Python environment that has ReportLab installed:
 
@@ -54,5 +54,7 @@ The earlier June 2026 PDF remains available for the root site. Confirm the exact
 The public design reference is captured in `research/brand-harvest/openrouter-home/` and `research/brand-harvest/openrouter-careers/`. The page translates OpenRouter's dark, lime-accented visual language into an independent candidate site. It uses OpenRouter's published wordmark with attribution in the footer.
 
 Content sources: OpenRouter's current [Enterprise Account Executive](https://jobs.ashbyhq.com/openrouter/34db850d-579f-4b4c-9827-76bc712b1a41) and [Account Executive](https://jobs.ashbyhq.com/openrouter/22d85a56-5500-40a5-9913-c98558d77f41) postings; the existing public résumé content in this repository; the public project links on the page; and Trey's application brief. The timeline uses [OpenAI's November 30, 2022 ChatGPT announcement](https://openai.com/index/chatgpt/) and [Replit's September 2024 Agent announcement](https://replit.com/blog/introducing-replit-agent) for launch timing. Trey's same-day signup and Agent use, the 2020 and 2023 milestones, and the March 2026 routing milestone are his account and should be confirmed before publication. The Trade Ledger entry reflects the fall 2024 prototype described in his Replit application materials. The private LLM gateway's first local commit was February 12, 2026.
+
+The `/perspective/` essay is a sourced, locally reviewable rewrite of Trey's private Notion draft, "AI in the Enterprise." It presents company-controlled harnesses as Trey's thesis and compares external APIs, rented capacity, and owned inference hardware by workload. Product capabilities and the Optimizely case are linked to primary sources in the essay. Optimizely's figures are vendor-reported, its two published benchmark score sets differ, and a public Mark-Bench repository or independent replication was not located on September 22, 2026. The Notion draft has not been changed.
 
 GitHub blocks third-party iframes. The application uses GitHub's public repository API to show an up-to-date repository list, falls back to a small curated list if the API is unavailable, and links to the full profile. The contribution screenshot is a dated user-provided capture.

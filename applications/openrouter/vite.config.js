@@ -11,5 +11,11 @@ export default defineConfig({
   build: {
     outDir: fileURLToPath(new URL('../../dist-openrouter', import.meta.url)),
     emptyOutDir: true,
+    rollupOptions: {
+      input: [
+        fileURLToPath(new URL('index.html', import.meta.url)),
+        fileURLToPath(new URL('perspective/index.html', import.meta.url)),
+      ],
+    },
   },
 });

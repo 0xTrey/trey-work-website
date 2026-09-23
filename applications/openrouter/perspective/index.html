@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080d0f" />
+    <meta name="description" content="Trey Harnden's working thesis on company-controlled AI harnesses, private inference, model routing, data policy, and enterprise compute economics." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The Enterprise Will Own Its AI Operating Layer | Trey Harnden" />
+    <title>The Enterprise Will Own Its AI Operating Layer | Trey Harnden</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+  </head>
+  <body class="or-app">
+    <a class="or-skip" href="#main">Skip to article</a>
+    <header class="or-header">
+      <div class="or-header-inner">
+        <a class="or-wordmark" href="/" aria-label="Trey Harnden for OpenRouter, back to application">
+          <span class="or-mark" aria-hidden="true"><span></span></span>
+          <span>Trey</span><b>/</b><img class="or-brand-logo" src="/openrouter/brand/openrouter-dark.svg" alt="OpenRouter" />
+        </a>
+        <a class="or-essay-back" href="/#perspective">Back to application <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main" class="or-essay or-shell">
+      <article>
+        <header class="or-essay-intro">
+          <h1>The enterprise will own its AI operating layer.</h1>
+          <p>My bet is that large companies will keep their memory, skills, permissions, and workflows under their own control. They will buy intelligence from several places, run some models privately, and change the mix as quality and economics move. The durable asset is the harness that knows how the business works.</p>
+          <p>I built a small version of this for myself. My agent harness keeps its own context and tools; a gateway decides which model handles each request. At enterprise scale, that same separation becomes a decision about security, operations, and capital.</p>
+        </header>
+
+        <section class="or-essay-section" aria-labelledby="own-layer">
+          <h2 id="own-layer">Own the layer that knows the business.</h2>
+          <p>A company harness connects people and agents to internal systems. It holds shared memory, approved skills, tool permissions, identity, policy, evaluations, and an audit trail. It decides what an agent can read, what it can change, what needs approval, and what evidence counts as success.</p>
+          <p>That is where a company's operating knowledge accumulates. If the harness is portable, the company can replace a model without rebuilding its processes or handing every new provider unrestricted access to its data. Owning the harness does not make an external model private. It gives the company one place to decide which data, if any, may leave for a particular task.</p>
+        </section>
+
+        <section class="or-essay-section" aria-labelledby="model-choice">
+          <h2 id="model-choice">Put each workload on the right model and compute.</h2>
+          <p>I expect a mix of three paths. Frontier APIs will handle work that needs the best available reasoning or rapid access to new capabilities. Dedicated rented capacity can serve workloads with steadier demand or stricter isolation. Company-owned systems may make sense when usage is sustained, latency matters, or some data cannot leave a controlled environment.</p>
+          <div class="or-essay-options" role="list" aria-label="Enterprise inference options">
+            <div role="listitem"><strong>External API</strong><span>Fast to start and easy to scale. Govern provider, retention, region, fallback, and spend for each request.</span></div>
+            <div role="listitem"><strong>Reserved capacity</strong><span>More predictable throughput and isolation. Commit to capacity while a cloud or specialist runs the hardware.</span></div>
+            <div role="listitem"><strong>Owned infrastructure</strong><span>Most control over placement and operations. Carry the purchase, power, cooling, staffing, and refresh costs.</span></div>
+          </div>
+          <p>Groq and Cerebras show that purpose-built accelerator systems exist for data center deployments. Equinix can host high-density infrastructure, and AWS offers dedicated deployment options. None of that proves that two or three racks are the right answer for every enterprise. The model, workload, throughput, power envelope, and deployment terms have to be measured first.</p>
+        </section>
+
+        <section class="or-essay-section" aria-labelledby="fine-tuning">
+          <h2 id="fine-tuning">Fine-tune for a repeated job, with an evaluation set.</h2>
+          <p>A company should consider post-training when it has a narrow, repeated task, reviewed examples or a reliable evaluator, and enough volume for the gain to matter. A model that follows the company's formats, calls tools correctly, or handles a domain-specific judgment can reduce retries and cost per successful task. Fireworks offers supervised and reinforcement fine-tuning, plus managed and bring-your-own-cloud deployment paths. The training location, data flow, and rights to the resulting weights still need to match the company's policy.</p>
+          <div class="or-essay-evidence"><strong>One useful signal</strong><p>Optimizely reports that its post-trained marketing models reached up to 10× better cost efficiency and roughly 7% higher quality in early internal testing. Separately, it says its Agent Platform scored 67% on its Mark-Bench all-pass measure versus 60% for Claude Code, at about half the cost. Those are company-reported results on marketing tasks. They are not a general proof that fine-tuning or a custom harness will deliver the same gains elsewhere, and the two cost claims should not be multiplied into a guaranteed 20× saving.</p></div>
+        </section>
+
+        <section class="or-essay-section" aria-labelledby="alpha">
+          <h2 id="alpha">Protect the company's alpha with a precise threat model.</h2>
+          <p>Alex Karp's language about “alpha” gets at something real: prompts may carry proprietary workflows, customer context, pricing logic, or research that gives a company its edge. A zero data retention agreement is a meaningful protection. It limits what a provider keeps after processing. Commercial AI providers also publish commitments against training on business data without permission.</p>
+          <p>Those commitments need to be read at the product and feature level. A request still has to be processed by the chosen provider, and tools such as web search, file storage, caching, or background jobs may have different rules. I cannot substantiate claims that providers secretly train on private chain-of-thought in violation of their commercial commitments. The case for a controlled harness stands on a simpler question: which information is allowed to leave, through which service, under which policy, for which business result?</p>
+          <p>For workloads that cannot leave, route to private inference. For other workloads, enforce retention, data collection, residency, provider allowlists, and audit controls at the boundary.</p>
+        </section>
+
+        <section class="or-essay-section" aria-labelledby="economics">
+          <h2 id="economics">Run the rack math against actual usage.</h2>
+          <p>The relevant number is cost per successful task at a required quality and latency. For an owned rack, count annualized hardware and financing, power, cooling, colocation, networking, software support, staffing, spare capacity, and replacement cycles. For a neocloud or reserved deployment, count the contract floor, usage, data transfer, operations, and the cost of idle commitment. For an API, count token spend, retries, and any provider or routing fees.</p>
+          <p>Owned hardware has a better chance when demand is high and steady enough to keep it busy. Rented capacity preserves flexibility for uncertain demand and bursts. A hybrid portfolio is likely for many enterprises. I would benchmark a representative month of real tasks, record utilization and cost per successful outcome, then size any rack purchase from that evidence. A rack is a financing decision as much as a technical one.</p>
+        </section>
+
+        <section class="or-essay-section or-essay-conclusion" aria-labelledby="routing">
+          <h2 id="routing">A company-owned harness makes routing more valuable.</h2>
+          <p>Once an enterprise owns the operating layer, it can choose compute deliberately. OpenRouter is a strong fit for the external side of that portfolio: model and provider choice, regional and data-policy routing, failover, cost visibility, and one integration path. Sensitive work can stay on a separate private path when policy requires it.</p>
+          <p>That's the enterprise conversation I want to have. Start with the workload and the buyer's constraints. Measure quality and cost. Then design the route that earns its place in production.</p>
+          <div class="or-essay-actions"><a class="or-button or-button-primary" href="/#perspective">Back to the application <span aria-hidden="true">↗</span></a><a class="or-button or-button-quiet" href="https://openrouter.ai/enterprise" target="_blank" rel="noopener noreferrer">OpenRouter for enterprise <span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+
+      <aside class="or-essay-sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">Sources and open questions</h2>
+        <p>This is a working thesis. The architecture and purchase recommendation are my judgment; the linked material supports the product capabilities and vendor-reported results.</p>
+        <ul>
+          <li><a href="https://www.optimizely.com/company/press/optimizely-models/" target="_blank" rel="noopener noreferrer">Optimizely's model and Mark-Bench announcement</a>. Its 10×, 67% versus 60%, and 2× figures are vendor-reported. <a href="https://www.optimizely.com/field-notes/articles/ai-platform-built-for-whats-next" target="_blank" rel="noopener noreferrer">The company blog</a> reports a different benchmark score set (58% versus 52%). I could not locate a public Mark-Bench repository or independent replication as of September 22, 2026.</li>
+          <li><a href="https://fireworks.ai/training" target="_blank" rel="noopener noreferrer">Fireworks training</a> and <a href="https://fireworks.ai/enterprise" target="_blank" rel="noopener noreferrer">deployment options</a> describe fine-tuning and bring-your-own-cloud paths.</li>
+          <li><a href="https://openrouter.ai/enterprise" target="_blank" rel="noopener noreferrer">OpenRouter Enterprise</a>, its <a href="https://openrouter.ai/docs/guides/get-started/sovereign-ai" target="_blank" rel="noopener noreferrer">routing controls</a>, and its <a href="https://openrouter.ai/privacy/" target="_blank" rel="noopener noreferrer">privacy policy</a> explain provider choice and data handling.</li>
+          <li><a href="https://openai.com/business-data/" target="_blank" rel="noopener noreferrer">OpenAI's business data policy</a> and <a href="https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-data-retention-agreement-with-anthropic-what-products-does-it-apply-to" target="_blank" rel="noopener noreferrer">Anthropic's ZDR scope</a> distinguish no-training commitments from feature-specific retention rules.</li>
+          <li><a href="https://groq.com/wp-content/uploads/2024/08/GroqRack%E2%84%A2-Compute-Cluster-Product-Brief-v1.7.pdf" target="_blank" rel="noopener noreferrer">GroqRack</a>, <a href="https://investors.cerebras.ai/static-files/02502019-2200-43f5-98d7-a86520d56ff4" target="_blank" rel="noopener noreferrer">Cerebras CS-3</a>, <a href="https://www.equinix.com/product-solutions/ai" target="_blank" rel="noopener noreferrer">Equinix AI infrastructure</a>, and <a href="https://aws.amazon.com/what-is/cloud-vs-on-premises/" target="_blank" rel="noopener noreferrer">AWS's cloud versus owned infrastructure guide</a> establish the available deployment choices, not a break-even point.</li>
+          <li><a href="https://www.cnbc.com/video/2026/07/01/watch-palantir-ceo-alex-karp-on-new-nvidia-deal.html" target="_blank" rel="noopener noreferrer">Alex Karp's CNBC interview</a> is the source for the “alpha” framing. His concerns are a thesis to examine, not proof of provider misconduct.</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="or-footer"><div class="or-shell"><span>Written by Trey Harnden. Working draft, September 22, 2026.</span><span>Independent candidate site. OpenRouter brand assets belong to OpenRouter.</span></div></footer>
+  </body>
+</html>
