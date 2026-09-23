@@ -9,6 +9,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "dev:openrouter": "vite --config applications/openrouter/vite.config.js --host 127.0.0.1",
     "build:openrouter": "vite build --config applications/openrouter/vite.config.js",
+    "deploy:openrouter": "npm run build:openrouter && wrangler deploy --config applications/openrouter/wrangler.jsonc",
     "preview:openrouter": "vite preview --config applications/openrouter/vite.config.js --host 127.0.0.1"
   },
   "dependencies": {

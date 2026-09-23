@@ -1,6 +1,8 @@
 node_modules
 dist
 dist-openrouter
+.wrangler/
+*.log
 .DS_Store
 .env
 .env.*
