@@ -5,6 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "dev:varick": "node applications/varick/prepare-fonts.mjs && vite --config applications/varick/vite.config.js --host 127.0.0.1",
+    "build:varick": "node applications/varick/prepare-fonts.mjs && vite build --config applications/varick/vite.config.js",
+    "preview:varick": "vite preview --config applications/varick/vite.config.js --host 127.0.0.1",
+    "deploy:varick": "npm run build:varick && wrangler deploy --config applications/varick/wrangler.jsonc",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "dev:openrouter": "vite --config applications/openrouter/vite.config.js --host 127.0.0.1",

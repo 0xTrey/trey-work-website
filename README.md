@@ -31,6 +31,10 @@ npm run dev
 npm run build
 ```
 
+## Varick application
+
+The Varick Forward Deployed GTM Engineer application is a separate module in [applications/varick](applications/varick/README.md). Use `npm run dev:varick` or `npm run build:varick`. Its strategy, claim-review notes, tailored résumé, and release instructions live beside the source. Publication has not been performed.
+
 ## OpenRouter application
 
 The Enterprise Account Executive application lives in `applications/openrouter/`. It has its own Vite entry point, so the root résumé site and the application can be built separately.

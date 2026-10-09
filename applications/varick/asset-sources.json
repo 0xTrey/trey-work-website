@@ -1,0 +1,53 @@
+{
+  "observed": "2026-10-09",
+  "reference": "https://www.varickagents.com/",
+  "fonts": [
+    {
+      "file": "public/fonts/switzer-400.woff2",
+      "source": "https://framerusercontent.com/third-party-assets/fontshare/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.woff2",
+      "family": "Switzer",
+      "publisher": "Fontshare",
+      "sha256": "ddd9595560c35725e00d01667ce9bee519d245620e610844f0dd149df10b5d5f",
+      "license": "public/fonts/Switzer-LICENSE.txt"
+    },
+    {
+      "file": "public/fonts/switzer-500.woff2",
+      "source": "https://framerusercontent.com/third-party-assets/fontshare/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.woff2",
+      "family": "Switzer",
+      "publisher": "Fontshare",
+      "sha256": "7393d1abac009ede0da9f95d6c83479a08d798e28d3509575e02fb1d2346866f",
+      "license": "public/fonts/Switzer-LICENSE.txt"
+    },
+    {
+      "file": "public/fonts/switzer-600.woff2",
+      "source": "https://framerusercontent.com/third-party-assets/fontshare/wf/5SZVFDB7V52TI6ULVC6J3WQZQCIZVDV5/ODYPSTCUDMKSTYIPTV4CLQ7URIK7XYBJ/YS3VPNVO4B3TOJMEXDGFZQ4TLZGGSRZC.woff2",
+      "family": "Switzer",
+      "publisher": "Fontshare",
+      "sha256": "d6497c264dbf70ae51add5103b6c7553dadff334b5853d09adf8c9f1c63ad36b",
+      "license": "public/fonts/Switzer-LICENSE.txt"
+    },
+    {
+      "file": "public/fonts/fragment-mono.woff2",
+      "source": "https://fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB4NHhg.woff2",
+      "family": "Fragment Mono",
+      "publisher": "Google Fonts",
+      "sha256": "44c4e39bff5e76652a24a872cbebabccbcfb20f62c4633b27c1f2745cba86b56",
+      "license": "public/fonts/Fragment-Mono-LICENSE.txt"
+    }
+  ],
+  "portrait": {
+    "file": "public/images/trey-headshot.jpg",
+    "source": "../../public/images/trey-headshot.jpg"
+  },
+  "liquid_field": {
+    "file": "src/liquid-field.js",
+    "source": "/Users/treyharnden/Projects/TreyHarndencom-Liquid-Preview/static/js/liquid-field.js",
+    "changes": [
+      "blue palette",
+      "element-relative coordinates",
+      "visibility suspension",
+      "resource cleanup",
+      "static fallback"
+    ]
+  }
+}

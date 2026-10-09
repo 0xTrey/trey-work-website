@@ -1,6 +1,8 @@
 node_modules
 dist
 dist-openrouter
+dist-varick
+applications/varick/public/fonts/switzer-*.woff2
 .wrangler/
 *.log
 .DS_Store
