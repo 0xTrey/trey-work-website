@@ -33,7 +33,7 @@ npm run build
 
 ## Varick application
 
-The Varick Forward Deployed GTM Engineer application is a separate module in [applications/varick](applications/varick/README.md). Use `npm run dev:varick` or `npm run build:varick`. Its strategy, claim-review notes, tailored résumé, and release instructions live beside the source. Publication has not been performed.
+The Varick Forward Deployed GTM Engineer application is live for review at [varick.trey.work](https://varick.trey.work/), with its source in [applications/varick](applications/varick/README.md). Use `npm run dev:varick` or `npm run build:varick`. Its strategy, claim-review notes, tailored résumé, and release receipts live beside the source.
 
 ## OpenRouter application
 

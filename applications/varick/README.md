@@ -22,12 +22,12 @@ python3 -m venv /tmp/varick-resume-venv
 /tmp/varick-resume-venv/bin/python applications/varick/build_resume.py
 ```
 
-Confirm current title, dates, metrics, and logistics before submission. After publication, add the verified application URL to the résumé. No relocation pledge is included.
+Confirm current title, dates, metrics, and logistics before submission. Before submitting, add the verified application URL to the résumé. No relocation pledge is included.
 
 ## Release
 
-Prepared target: `varick.trey.work`, Cloudflare Worker `trey-varick-application`. This configuration has not been deployed. Meta tags reserve that canonical URL; `noindex, nofollow` keeps the application out of search indexing.
+Published for Trey review on October 11, 2026: [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`, version `686dd578-4464-44f8-8dde-1c0acf33f8a3`. The live page and assets match source commit `87aeb3d`. Public HTTP checks, browser interactions, and screenshots are recorded in [verification.md](verification.md) and [release-20261011.json](release-20261011.json). No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
 
-Once Trey approves publication, run `env -u CLOUDFLARE_API_TOKEN npm run deploy:varick`. Verify public HTTPS, homepage, résumé, fonts, portrait, social image, and unknown-path 404. Check desktop and phone interactions against the public route. A successful local build does not establish live publication.
+For an approved update, run `env -u CLOUDFLARE_API_TOKEN npm run deploy:varick`. Verify public HTTPS, homepage, résumé, fonts, portrait, social image, and unknown-path 404. Check desktop and phone interactions against the public route. A successful local build does not establish live publication.
 
 Implementation stayed in Codex: Cursor authentication was available, but fresh included-capacity and disabled-spending evidence was not established, so no Cursor assignment ran.

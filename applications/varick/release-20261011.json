@@ -1,0 +1,118 @@
+{
+  "observed_at": "2026-10-11T21:54:00.706640+00:00",
+  "site": "https://varick.trey.work",
+  "worker": "trey-varick-application",
+  "version": "686dd578-4464-44f8-8dde-1c0acf33f8a3",
+  "source_commit": "87aeb3d",
+  "client": "curl, no cookies or authentication",
+  "anonymous_requests": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://varick.trey.work/",
+      "bytes": 1479,
+      "sha256": "088ca9294447153af413fc737698bf8df3cf00728e4551a8bb08328d618172a0",
+      "matches_build": true
+    },
+    {
+      "path": "/resume/Trey-Harnden-Varick-GTM-Engineer.pdf",
+      "status": 200,
+      "type": "application/pdf",
+      "url": "https://varick.trey.work/resume/Trey-Harnden-Varick-GTM-Engineer.pdf",
+      "bytes": 6103,
+      "sha256": "dc8ab1f0b7c737968356a525d032e1eee5748832f532af8f954da4647104c62a",
+      "matches_build": true
+    },
+    {
+      "path": "/fonts/switzer-400.woff2",
+      "status": 200,
+      "type": "font/woff2",
+      "url": "https://varick.trey.work/fonts/switzer-400.woff2",
+      "bytes": 16728,
+      "sha256": "ddd9595560c35725e00d01667ce9bee519d245620e610844f0dd149df10b5d5f",
+      "matches_build": true
+    },
+    {
+      "path": "/fonts/switzer-500.woff2",
+      "status": 200,
+      "type": "font/woff2",
+      "url": "https://varick.trey.work/fonts/switzer-500.woff2",
+      "bytes": 19564,
+      "sha256": "7393d1abac009ede0da9f95d6c83479a08d798e28d3509575e02fb1d2346866f",
+      "matches_build": true
+    },
+    {
+      "path": "/fonts/switzer-600.woff2",
+      "status": 200,
+      "type": "font/woff2",
+      "url": "https://varick.trey.work/fonts/switzer-600.woff2",
+      "bytes": 19640,
+      "sha256": "d6497c264dbf70ae51add5103b6c7553dadff334b5853d09adf8c9f1c63ad36b",
+      "matches_build": true
+    },
+    {
+      "path": "/fonts/fragment-mono.woff2",
+      "status": 200,
+      "type": "font/woff2",
+      "url": "https://varick.trey.work/fonts/fragment-mono.woff2",
+      "bytes": 25224,
+      "sha256": "44c4e39bff5e76652a24a872cbebabccbcfb20f62c4633b27c1f2745cba86b56",
+      "matches_build": true
+    },
+    {
+      "path": "/images/trey-headshot.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "url": "https://varick.trey.work/images/trey-headshot.jpg",
+      "bytes": 217663,
+      "sha256": "fd4793f387c7a69437b9b2a6485b769fa59225857b58313032d4af4721c33820",
+      "matches_build": true
+    },
+    {
+      "path": "/social-card.png",
+      "status": 200,
+      "type": "image/png",
+      "url": "https://varick.trey.work/social-card.png",
+      "bytes": 66688,
+      "sha256": "21d9cb7c597160b274094c44a78571123531aecb744ddc60695211f2da55bd1f",
+      "matches_build": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "url": "https://varick.trey.work/favicon.svg",
+      "bytes": 198,
+      "sha256": "b26884497894cac284a672c33d75aeb67cc8813f8b87f0bc96efc3b85d0babd0",
+      "matches_build": true
+    },
+    {
+      "path": "/assets/index-jrEJMx-i.css",
+      "status": 200,
+      "type": "text/css",
+      "url": "https://varick.trey.work/assets/index-jrEJMx-i.css",
+      "bytes": 25171,
+      "sha256": "48038cd20def7fda4dc0af611bb18c1b42053a39cb67c4225a230e7273a0ed4d",
+      "matches_build": true
+    },
+    {
+      "path": "/assets/index-DtgrEvaQ.js",
+      "status": 200,
+      "type": "text/javascript",
+      "url": "https://varick.trey.work/assets/index-DtgrEvaQ.js",
+      "bytes": 227656,
+      "sha256": "4ba05abd566ea52b482b2697033415bd26a30340aa07fd2d5b70fed39bb23e38",
+      "matches_build": true
+    },
+    {
+      "path": "/not-a-real-page",
+      "status": 404,
+      "type": "text/html",
+      "url": "https://varick.trey.work/not-a-real-page",
+      "bytes": 356,
+      "sha256": "6b27ca0d814c5041a0c53ae5b9f625445c650d15fbcfb5741eef80b2bcd264d3"
+    }
+  ],
+  "initial_check_note": "Initial Python urllib probes returned 403. Subsequent curl probes and the real public browser loaded the site without authentication."
+}

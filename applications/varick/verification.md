@@ -1,6 +1,6 @@
 # Varick application verification
 
-Observed October 9, 2026, on Trey's Mac. Local review build only.
+Initial checks observed October 9, 2026, on Trey's Mac. The October 11 public release is recorded below.
 
 | Check | Receipt |
 | --- | --- |
@@ -32,4 +32,17 @@ dc8ab1f0b7c737968356a525d032e1eee5748832f532af8f954da4647104c62a  public/resume/
 088ca9294447153af413fc737698bf8df3cf00728e4551a8bb08328d618172a0  ../../dist-varick/index.html
 ```
 
-No application submission, outreach, remote push, or live deployment occurred.
+No application submission, outreach, remote push, or live deployment occurred during the October 9 initial build.
+
+## Public release, October 11, 2026
+
+Trey authorized publication to `varick.trey.work` for review. Cloudflare Worker `trey-varick-application` now serves source commit `87aeb3d` at [the public HTTPS page](https://varick.trey.work/), deployment version `686dd578-4464-44f8-8dde-1c0acf33f8a3` at 100% traffic. Local preview was restarted on port 5199.
+
+- Anonymous curl requests: homepage, résumé, all four fonts, portrait, social image, favicon, JavaScript, and CSS returned 200 with expected types and byte-for-byte build matches. Unknown path returned 404. See `release-20261011.json`.
+- Real in-app browser: page rendered at 1280 × 720; client and scroll widths matched at 1265. The liquid canvas was visible. Pause/Resume changed state correctly; project selection changed the evidence links; the stalled-deal scenario opened its matching discovery notes. No console errors or warnings.
+- Phone at 390 × 844: client and scroll widths matched at 375. Navigation opened, followed the work anchor, and closed. Viewport was restored after testing.
+- Screenshots: `review/20261011-live-desktop.jpg` and `review/20261011-live-mobile.jpg`.
+
+Initial Python urllib requests returned 403; ordinary curl requests and the public browser subsequently loaded without authentication. No access policy or security setting was changed. The earlier local-tab automation request was rejected by browser policy, so local UI automation was not retried. Verification used the requested public HTTPS site.
+
+The public page is a review draft. No job application or outreach was submitted. Social-image delivery passed; third-party social unfurl behavior was not tested.
