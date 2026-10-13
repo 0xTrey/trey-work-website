@@ -56,3 +56,16 @@ Removed the user-selected "Built around your actual role" link from the fit sect
 Added [Thursday's webinar registration page](https://engage.folloze.com/ai-live-build) to row 1 and the [public outbound-engine repository](https://github.com/0xTrey/folloze-outbound-engine-public) to row 2. The webinar's live page names Trey as presenter, states October 15, 2026 at 12 p.m. Eastern, and renders a registration form. No form was submitted and provider enrollment was not tested. The repository returned HTTP 200.
 
 Build and deployment passed; Cloudflare version `ef20a3ca-8c46-46c8-8fa5-3918afa2a571` serves both links. Public browser readback confirms the exact destinations, new-tab behavior, and `noopener noreferrer`. At 390px, client and scroll widths both equal 375; both links have 44px click-target height. The previously removed heading link still has zero matches. Screenshot: `review/20261012-fit-evidence-links.jpg`.
+
+## Real deals and builds, October 12, 2026
+
+Replaced the fictional opportunity sample with real Folloze commercial history, the Trade Ledger research prototype, and Try Me Now. Each case gives ownership, results or outputs, a relevant next step, and expandable details. The navigation now calls this section "The results"; `#approach` still works. Sources and claim limits are in [case-evidence.md](case-evidence.md).
+
+- Build and diff checks passed. Cloudflare version `73a4967f-c68e-476a-a3e9-36373a176094` serves the update.
+- Anonymous homepage, résumé, JS and CSS requests returned 200 and matched the build bytes. The old company names and fictional-sample labels are absent from the live bundle. Receipt: `release-20261012-real-results.json`.
+- Browser: all three cases selected and displayed their matching content; each details button opened the correct list. Switching cases reset the disclosure. Home returned keyboard focus and selection to the first case; ArrowDown selected the next case on phone.
+- Desktop client and scroll widths both equal 1265. At 390 × 844, both equal 375; case buttons are at least 57px tall. Phone navigation opened, followed the results link, and closed. No console warning or error entries. Viewport restored after testing.
+- Existing webinar and public outbound links retain their exact destinations. The removed "Built around your actual role" link has zero matches.
+- Public Try Me Now entry rendered; no generation or publication was initiated. Commercial numbers remain résumé-backed. Trade Ledger remains a private customer prototype, with no measured lift or production claim.
+
+Screenshots: `review/20261012-real-results-desktop.jpg`, `review/20261012-trade-ledger-desktop.jpg`, and `review/20261012-real-results-mobile.jpg`. No job application or outreach was submitted.

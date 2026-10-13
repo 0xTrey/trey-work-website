@@ -25,7 +25,7 @@ function Header() {
     <a className="wordmark" href="#top" aria-label="Trey Harnden for Varick, back to top"><span className="monogram">TH</span><span>Trey Harnden <i>/</i> <span className="for-brand">for Varick</span></span></a>
     <button className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="page-nav" aria-label={open ? 'Close navigation' : 'Open navigation'}>{open ? <X /> : <Menu />}</button>
     <nav id="page-nav" className={open ? 'nav open' : 'nav'} aria-label="Page navigation">
-      <a href="#fit" onClick={() => setOpen(false)}>The fit</a><a href="#work" onClick={() => setOpen(false)}>The work</a><a href="#approach" onClick={() => setOpen(false)}>The approach</a>
+      <a href="#fit" onClick={() => setOpen(false)}>The fit</a><a href="#work" onClick={() => setOpen(false)}>The work</a><a href="#approach" onClick={() => setOpen(false)}>The results</a>
       <External href={email} className="nav-cta" onClick={() => setOpen(false)}>Let's talk <ArrowUpRight size={17} /></External>
     </nav>
   </div></header>;
@@ -112,18 +112,31 @@ function Work() {
   </div></section>;
 }
 
-const scenarios = [
-  { name:'Inbound with real urgency', company:'Northstar Manufacturing', kind:'Operations leader · Inbound', stage:'Discovery', signal:'The COO owns the problem. AP exceptions are delaying month-end close. The team uses SAP and is asking about a scoped pilot.', action:'Get the owner into a working session.', why:'There is a specific operational problem and an accountable sponsor. Validate the baseline, systems, access, and success criteria before proposing scope.', questions:['How many exceptions reach people each week?','Who owns the budget and deployment decision?','What must the pilot demonstrate to move forward?'], output:'Working session with the COO, AP lead, and technical owner. Document the current cost, a bounded pilot, and a dated decision.' },
-  { name:'Interest without an owner', company:'Meridian Financial', kind:'Innovation team · Newsletter reply', stage:'Qualification', signal:'A team wants an AI demo. No workflow, sponsor, or budget owner is named. Their request is “show us what agents can do.”', action:'Find a concrete workflow before a broad demo.', why:'Curiosity is useful, but it does not establish a qualified opportunity. Give them a relevant example, then ask for the process and accountable owner.', questions:['Which recurring workflow is slowing the business?','Who is accountable for its outcome today?','Can that person join the next conversation?'], output:'Short, relevant example plus an introduction to the workflow owner. Keep the contact warm; do not forecast a close date yet.' },
-  { name:'A deal stuck in review', company:'Atlas Distribution', kind:'VP Operations · Active opportunity', stage:'Commercial review', signal:'The sponsor wants to move. Security needs answers, procurement has not confirmed timing, and the forecast still says this month.', action:'Make the approval path explicit.', why:'The next step is an owner and a date for each unresolved dependency. Buyer intent alone does not make an opportunity commit-ready.', questions:['Who owns the outstanding security decision?','What does procurement need to start its review?','Does the buyer agree to the close plan and dates?'], output:'Mutual action plan with named review owners and agreed dates. Update the forecast from verified milestones, then coordinate the delivery handoff.' },
+const caseHistories = [
+  { id:'folloze-revenue', name:'Revenue at Folloze', company:'Folloze', kind:'Enterprise sales + account growth · 2022–2026', status:'Commercial record', context:'I owned enterprise deals from discovery through contract, then took on account growth and rebuilt the partner program.', headline:'Signed business. Renewed accounts.', outcomes:[{value:'20+',label:'six-figure new-logo deals · 2022–2024'},{value:'$337K ARR',label:'from four partner-sourced deals · 2025'},{value:'27 of 31',label:'customers renewed; 21 moved to multiyear agreements · 2025'}], details:['Self-sourced 78% of my 2023 revenue.','Built a new agency channel worth $202K ARR in 2025.','Achieved 111% net revenue retention on a $3.57M TCV book in 2025.'], link:{label:'Read the commercial record',href:resume}, note:'Results from my résumé. Customer contracts remain private.' },
+  { id:'trade-ledger', name:'Trade Ledger', company:'Trade Ledger account research', kind:'Custom customer tool · Fall 2024', status:'Working prototype', context:'Their account executives needed useful company context from long SEC filings. I turned their ABM research requirements into a repeatable account-dossier workflow.', headline:'Company filings became sales briefs.', outcomes:[{value:'10-K + 10-Q',label:'company filings as the input'},{value:'Retrieval + prompts',label:'relevant context extracted with chained prompting'},{value:'Account dossier',label:'a repeatable ABM research brief for sellers'}], details:['Built a custom Python application with AI coding assistance.','Used retrieval and chained prompts to extract the information needed for each account dossier.','Delivered a working customer prototype in fall 2024.'], link:{label:'Talk through this build',href:email}, note:'Customer prototype. The implementation stays private.' },
+  { id:'try-me-now', name:'Try Me Now', company:'Folloze Try Me Now', kind:'Product direction + build', status:'Working V1', context:'The CEO brief was broad: help buyers experience Folloze’s value quickly. I shaped the requirements, interaction logic, architecture, and QA, then built the first usable version with coding agents.', headline:'A broad brief became a working product.', outcomes:[{value:'Company context',label:'a guided starting point for the buyer'},{value:'Brand research',label:'context for a personalized campaign page'},{value:'Public V1',label:'a build the team and buyers can open and review'}], details:['Translated the initial request into a defined product and interaction flow.','Built the first usable version in roughly ten focused hours.','Continued refining the experience, review requirements, and launch gaps.'], link:{label:'Open Try Me Now',href:'https://folloze-try-me-now.vercel.app'}, note:'Working V1. Production hardening remains part of the work.' },
 ];
 
-function Approach() {
+function Results() {
   const [selected,setSelected]=useState(0), [expanded,setExpanded]=useState(false);
-  const s=scenarios[selected];
-  return <section className="approach-section" id="approach"><div className="shell section"><div className="section-head"><h2>Good tools.<br />Better judgment.</h2><div className="section-intro"><p>Speed comes from knowing what should happen next. Here's how I'd work three different opportunities.</p><span className="sample-label">Interactive work sample · Fictional accounts</span></div></div>
-    <div className="scenario-picker" aria-label="Choose an opportunity">{scenarios.map((scenario,i)=><button key={scenario.name} aria-pressed={selected===i} onClick={()=>{setSelected(i);setExpanded(false);}} className={selected===i?'scenario-choice active':'scenario-choice'}><span>{i+1}</span>{scenario.name}<ArrowRight size={17}/></button>)}</div>
-    <div className="opportunity"><div className="opportunity-context"><h3>{s.company}</h3><div className="opportunity-meta"><span>{s.kind}</span><span className="stage">{s.stage}</span></div><p>{s.signal}</p><div className="signal-lines" aria-hidden="true"><span/><span/><span/></div><span className="sample-small">Illustrative decision logic. No live CRM or AI calls.</span></div><div className="opportunity-decision" aria-live="polite"><h3>{s.action}</h3><p>{s.why}</p><button className="inspect-button" onClick={()=>setExpanded(!expanded)} aria-expanded={expanded} aria-controls="discovery-output">{expanded?'Close discovery notes':'Open discovery notes'}<ChevronDown size={18} /></button><div id="discovery-output" hidden={!expanded} className="discovery-output"><ul>{s.questions.map(q=><li key={q}>{q}</li>)}</ul><p><strong>The output:</strong> {s.output}</p></div></div></div>
+  const tabs=useRef([]), c=caseHistories[selected];
+  function select(index) { setSelected(index); setExpanded(false); }
+  function navigate(event,index) {
+    let next;
+    if(event.key==='ArrowRight'||event.key==='ArrowDown') next=(index+1)%caseHistories.length;
+    else if(event.key==='ArrowLeft'||event.key==='ArrowUp') next=(index-1+caseHistories.length)%caseHistories.length;
+    else if(event.key==='Home') next=0;
+    else if(event.key==='End') next=caseHistories.length-1;
+    else return;
+    event.preventDefault(); select(next); tabs.current[next]?.focus();
+  }
+  return <section className="results-section" id="approach"><div className="shell section"><div className="section-head"><h2>Real deals.<br />Working systems.</h2><p className="section-intro">The deals I've owned and the tools I've built. What I did, what came out of it, and what you can inspect.</p></div>
+    <div className="case-picker" role="tablist" aria-label="Real deals and builds">{caseHistories.map((history,i)=><button ref={el=>tabs.current[i]=el} key={history.id} role="tab" id={`case-tab-${history.id}`} aria-selected={selected===i} aria-controls={`case-panel-${history.id}`} tabIndex={selected===i?0:-1} onKeyDown={event=>navigate(event,i)} onClick={()=>select(i)} className={selected===i?'case-choice active':'case-choice'}><span>{i+1}</span>{history.name}<ArrowRight size={17}/></button>)}</div>
+    <article className="case-history" key={c.id} role="tabpanel" id={`case-panel-${c.id}`} aria-labelledby={`case-tab-${c.id}`} tabIndex={0}>
+      <div className="case-context"><h3>{c.company}</h3><div className="case-meta"><span>{c.kind}</span><span className="case-status">{c.status}</span></div><p>{c.context}</p><External href={c.link.href} className="text-link case-link">{c.link.label}<ArrowUpRight size={16}/></External><p className="case-note">{c.note}</p></div>
+      <div className="case-results"><h3>{c.headline}</h3><dl className="case-outcomes">{c.outcomes.map(outcome=><div key={outcome.value}><dt>{outcome.value}</dt><dd>{outcome.label}</dd></div>)}</dl><button className="inspect-button" onClick={()=>setExpanded(!expanded)} aria-expanded={expanded} aria-controls={`case-details-${c.id}`}>{expanded?'Close the details':'My role and the details'}<ChevronDown size={18}/></button><div id={`case-details-${c.id}`} hidden={!expanded} className="case-details"><ul>{c.details.map(detail=><li key={detail}>{detail}</li>)}</ul></div></div>
+    </article>
   </div></section>;
 }
 
@@ -141,7 +154,7 @@ function Closing() {
 }
 
 function App() {
-  return <><a href="#main" className="skip-link">Skip to content</a><Header/><main id="main"><Hero/><Proof/><Fit/><Work/><Approach/><Plan/><About/><Closing/></main></>;
+  return <><a href="#main" className="skip-link">Skip to content</a><Header/><main id="main"><Hero/><Proof/><Fit/><Work/><Results/><Plan/><About/><Closing/></main></>;
 }
 
 const appRoot = import.meta.hot?.data.root ?? createRoot(document.getElementById('root'));

@@ -1,0 +1,62 @@
+{
+  "reviewed_at": "2026-10-12",
+  "worker": "trey-varick-application",
+  "version": "73a4967f-c68e-476a-a3e9-36373a176094",
+  "url": "https://varick.trey.work/#approach",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "content_type": "text/html",
+      "matches_build": true,
+      "sha256": "2857f7787fdbb2ef4d7761cecb74a8b5934de2a09e2ec241a701414e84ccf16d"
+    },
+    {
+      "route": "/resume/Trey-Harnden-Varick-GTM-Engineer.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "matches_build": true,
+      "sha256": "dc8ab1f0b7c737968356a525d032e1eee5748832f532af8f954da4647104c62a"
+    },
+    {
+      "route": "/assets/index-B3mTt07p.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "matches_build": true,
+      "sha256": "8fd365a83ea9cb049b608047c6b4a1c3a81b56f55aa7cfb4ac5b61af03380b92"
+    },
+    {
+      "route": "/assets/index-B4gd4Pau.css",
+      "status": 200,
+      "content_type": "text/css",
+      "matches_build": true,
+      "sha256": "ebab1f85a0af6c994de3b76ba0013f89624b05d5bc94acb780f72931517683ee"
+    }
+  ],
+  "verified_at_utc": "2026-10-13T01:59:39Z",
+  "browser": {
+    "desktop_client_width": 1265,
+    "desktop_scroll_width": 1265,
+    "phone_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "phone_client_width": 375,
+    "phone_scroll_width": 375,
+    "case_tabs_verified": 3,
+    "details_verified": 3,
+    "keyboard": [
+      "Home",
+      "ArrowDown"
+    ],
+    "console_errors_and_warnings": 0,
+    "fictional_content_present": false,
+    "removed_heading_link_count": 0,
+    "viewport_restored": true
+  },
+  "screenshots": [
+    "review/20261012-real-results-desktop.jpg",
+    "review/20261012-trade-ledger-desktop.jpg",
+    "review/20261012-real-results-mobile.jpg"
+  ]
+}

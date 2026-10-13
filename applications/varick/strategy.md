@@ -60,8 +60,9 @@ Ask how much pipeline is qualified, where opportunities stall, who owns delivery
 | 20+ deals, 78%, #1 AE, 111% NRR | Root site `src/main.jsx`, existing résumé builder, prior application evidence | Existing résumé claims, not independently audited employer data. Confirm before submission. |
 | Outbound architecture | Public `folloze-outbound-engine-public` README | Public source checked. Conversion metrics not established. |
 | Content and activation work | Existing Replit Projects page and evidence matrix; public repos | Artifact-backed work plus candidate account of ownership. |
+| Deal record and customer builds | Existing résumé; Replit project source and evidence matrix; Try Me Now public page | Real history. Commercial figures are résumé claims; Trade Ledger is a customer prototype; Try Me Now is a working V1. See `case-evidence.md`. |
 | Visual identity | Varick homepage rendered and inspected October 9 | Switzer, Fragment Mono, #0a3eff, white, #202020. |
 | Liquid field | `TreyHarndencom-Liquid-Preview/static/js/liquid-field.js` | Reused wake model, adapted palette and canvas bounds, pause and fallback behavior. |
 | Logistics | Current job posting; Trey response pending | No relocation or work-schedule commitment published. |
 
-The outreach draft and résumé need Trey review. The interactive opportunities are fictional examples of judgment, not live CRM data or agent runs. The 60-day plan is a proposal, not a guaranteed revenue outcome.
+The outreach draft and résumé need Trey review. The results section uses real commercial history and builds. It does not expose individual customer contracts or claim measured lift for the prototypes. The 60-day plan is a proposal, not a guaranteed revenue outcome.

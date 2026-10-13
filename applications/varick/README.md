@@ -10,7 +10,7 @@ npm run preview:varick -- --port 5199
 
 Build output: `dist-varick/`. Strategy and claim review: [strategy.md](strategy.md). Verification: [verification.md](verification.md).
 
-The page uses Varick's published font families and color, with an original candidate layout and a blue adaptation of Trey's personal-site-v2 liquid field. It supports pause, reduced motion, a static WebGL fallback, keyboard-operated project tabs, and phone navigation. The work sample uses fictional accounts and local decision logic. No API keys, tracking, external AI calls, or forms are included.
+The page uses Varick's published font families and color, with an original candidate layout and a blue adaptation of Trey's personal-site-v2 liquid field. It supports pause, reduced motion, a static WebGL fallback, keyboard-operated project and case tabs, and phone navigation. The results section covers Folloze's commercial record, the Trade Ledger customer prototype, and Try Me Now. Sources and claim limits are in [case-evidence.md](case-evidence.md). No API keys, tracking, external AI calls, or forms are included.
 
 Fonts were downloaded from the font URLs in Varick's homepage on October 9, 2026. URLs, hashes, and attribution are in `asset-sources.json`; licenses are in `public/fonts/`. Switzer's license allows self-hosting on Trey's site but restricts redistribution. Its three font files are Git-ignored and fetched with hash checks before development or builds. Fragment Mono is included under its SIL license.
 
@@ -26,7 +26,7 @@ Confirm current title, dates, metrics, and logistics before submission. Before s
 
 ## Release
 
-Published for Trey review on October 11, 2026: [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`, version `686dd578-4464-44f8-8dde-1c0acf33f8a3`. The live page and assets match source commit `87aeb3d`. Public HTTP checks, browser interactions, and screenshots are recorded in [verification.md](verification.md) and [release-20261011.json](release-20261011.json). No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
+Published for Trey review at [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`. The October 12 real-results update is version `73a4967f-c68e-476a-a3e9-36373a176094`. Public files match the build; HTTP and browser receipts are in [verification.md](verification.md) and [release-20261012-real-results.json](release-20261012-real-results.json). Earlier releases remain in the verification history. No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
 
 For an approved update, run `env -u CLOUDFLARE_API_TOKEN npm run deploy:varick`. Verify public HTTPS, homepage, résumé, fonts, portrait, social image, and unknown-path 404. Check desktop and phone interactions against the public route. A successful local build does not establish live publication.
 
