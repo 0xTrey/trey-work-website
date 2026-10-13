@@ -65,4 +65,4 @@ Ask how much pipeline is qualified, where opportunities stall, who owns delivery
 | Liquid field | `TreyHarndencom-Liquid-Preview/static/js/liquid-field.js` | Reused wake model, adapted palette and canvas bounds, pause and fallback behavior. |
 | Logistics | Current job posting; Trey response pending | No relocation or work-schedule commitment published. |
 
-The outreach draft and résumé need Trey review. The results section uses real commercial history and builds. It does not expose individual customer contracts or claim measured lift for the prototypes. The 60-day plan is a proposal, not a guaranteed revenue outcome.
+The outreach draft and résumé need Trey review. The results section uses real commercial history and builds. It does not expose individual customer contracts or claim measured lift for the prototypes. The 30-day plan is a proposal, not a guaranteed revenue outcome.

@@ -26,7 +26,7 @@ Confirm current title, dates, metrics, and logistics before submission. Before s
 
 ## Release
 
-Published for Trey review at [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`. The October 12 real-results update is version `73a4967f-c68e-476a-a3e9-36373a176094`. Public files match the build; HTTP and browser receipts are in [verification.md](verification.md) and [release-20261012-real-results.json](release-20261012-real-results.json). Earlier releases remain in the verification history. No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
+Published for Trey review at [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`. The October 12 first-30-days update is version `9b070dae-ad84-46b0-a9f3-75a1dd1aa47f`. Public files match the build; HTTP and browser receipts are in [verification.md](verification.md). Earlier releases remain in the verification history, including [the real-results receipt](release-20261012-real-results.json). No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
 
 For an approved update, run `env -u CLOUDFLARE_API_TOKEN npm run deploy:varick`. Verify public HTTPS, homepage, résumé, fonts, portrait, social image, and unknown-path 404. Check desktop and phone interactions against the public route. A successful local build does not establish live publication.
 

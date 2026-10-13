@@ -69,3 +69,7 @@ Replaced the fictional opportunity sample with real Folloze commercial history, 
 - Public Try Me Now entry rendered; no generation or publication was initiated. Commercial numbers remain résumé-backed. Trade Ledger remains a private customer prototype, with no measured lift or production claim.
 
 Screenshots: `review/20261012-real-results-desktop.jpg`, `review/20261012-trade-ledger-desktop.jpg`, and `review/20261012-real-results-mobile.jpg`. No job application or outreach was submitted.
+
+## First 30 days, October 12, 2026
+
+Changed the heading to "My first 30 days" and the three phases to days 1–7, 8–14, and 15–30. Updated the strategy note and added the `#plan` review anchor. Build and diff checks passed; Cloudflare version `9b070dae-ad84-46b0-a9f3-75a1dd1aa47f` serves the change. Anonymous HTML and JavaScript match the build; the old heading and date ranges are absent from the bundle. The public browser shows the new heading and all three ranges. Screenshot: `review/20261012-first-30-days.jpg`.
