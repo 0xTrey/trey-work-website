@@ -50,3 +50,9 @@ The public page is a review draft. No job application or outreach was submitted.
 ## Fit link removal, October 12, 2026
 
 Removed the user-selected "Built around your actual role" link from the fit section. Build and deployment passed; Cloudflare version `d0c37a94-02c1-41f8-ba15-cc22e01ad857` serves the update. Public HTML and JavaScript match the build, the removed text is absent from the bundle, and the reloaded browser reports zero matching links. The fit heading and paragraph remain visible in the DOM.
+
+## Fit evidence links, October 12, 2026
+
+Added [Thursday's webinar registration page](https://engage.folloze.com/ai-live-build) to row 1 and the [public outbound-engine repository](https://github.com/0xTrey/folloze-outbound-engine-public) to row 2. The webinar's live page names Trey as presenter, states October 15, 2026 at 12 p.m. Eastern, and renders a registration form. No form was submitted and provider enrollment was not tested. The repository returned HTTP 200.
+
+Build and deployment passed; Cloudflare version `ef20a3ca-8c46-46c8-8fa5-3918afa2a571` serves both links. Public browser readback confirms the exact destinations, new-tab behavior, and `noopener noreferrer`. At 390px, client and scroll widths both equal 375; both links have 44px click-target height. The previously removed heading link still has zero matches. Screenshot: `review/20261012-fit-evidence-links.jpg`.

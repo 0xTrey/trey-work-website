@@ -7,6 +7,8 @@ import './styles.css';
 const job = 'https://jobs.ashbyhq.com/Varick-Agents/60b30ec4-fa04-47d6-96e8-7b69ab8d94e7';
 const email = 'mailto:harnden.trey@gmail.com?subject=Varick%20%7C%20Forward%20Deployed%20GTM%20Engineer';
 const resume = '/resume/Trey-Harnden-Varick-GTM-Engineer.pdf';
+const publicOutboundRepo = 'https://github.com/0xTrey/folloze-outbound-engine-public';
+const aiAbmWebinar = 'https://engage.folloze.com/ai-live-build';
 
 function External({ href, children, className = '', ...props }) {
   return <a href={href} className={className} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
@@ -68,20 +70,20 @@ function Proof() {
 }
 
 const fit = [
-  { title: 'Get the right buyers moving.', need: 'Qualify inbound. Build trust fast.', proof: 'Enterprise discovery, customer AI workshops, and live demos. I can find the workflow, the owner, and the reason to act.' },
-  { title: 'Create demand with my own tools.', need: 'Build outbound to the accounts you want.', proof: 'I built an outbound engine connecting account research, Salesforce, enrichment, personalization, and buyer signals.' },
+  { title: 'Get the right buyers moving.', need: 'Qualify inbound. Build trust fast.', proof: 'Enterprise discovery, customer AI workshops, and live demos. I can find the workflow, the owner, and the reason to act.', link: { label: 'Register for AI for ABM · Oct 15', href: aiAbmWebinar } },
+  { title: 'Create demand with my own tools.', need: 'Build outbound to the accounts you want.', proof: 'I built an outbound engine connecting account research, Salesforce, enrichment, personalization, and buyer signals.', link: { label: 'View the public GitHub repo', href: publicOutboundRepo } },
   { title: 'Stay in the deal through signature.', need: 'Own the commercial outcome.', proof: '20+ six-figure new-logo deals at Folloze. I know the work between a good first call and a signed contract.' },
   { title: 'Make the next deal easier.', need: 'Turn client feedback into a stronger system.', proof: 'My work spans partnerships, GTM engineering, product feedback, demos, and customer enablement. The learning comes back into the business.' },
 ];
 
 function Fit() {
   return <section id="fit" className="section shell fit-section"><div className="section-head"><h2>Your pipeline<br />needs an owner.</h2><div className="section-intro"><p>You need someone who can work the inbound, build the outbound, and stay accountable through signature. That's the intersection I've been working toward.</p></div></div>
-    <div className="fit-list">{fit.map((f,i) => <article className="fit-row" key={f.title}><span className="row-number">{i+1}</span><div><h3>{f.title}</h3><span className="fit-need">{f.need}</span></div><p>{f.proof}</p><Check size={22} aria-hidden="true" /></article>)}</div>
+    <div className="fit-list">{fit.map((f,i) => <article className="fit-row" key={f.title}><span className="row-number">{i+1}</span><div><h3>{f.title}</h3><span className="fit-need">{f.need}</span></div><p>{f.proof}{f.link && <External href={f.link.href} className="text-link fit-evidence-link">{f.link.label}<ArrowUpRight size={16} /></External>}</p><Check size={22} aria-hidden="true" /></article>)}</div>
   </section>;
 }
 
 const projects = [
-  { id:'outbound', name:'The outbound engine', type:'Research → relevant outreach → signal memory', copy:'I built the operating loop I wanted as a seller: research the account, understand the person, create a useful touch, and carry what we learn into the next one.', role:'I designed the operating model and built the engine with coding agents. The public reference shows connector boundaries, scoring, orchestration, and send controls.', nodes:['Account + contact','Research + scoring','Approved outreach','Reply + engagement','Next useful touch'], stack:['Python','Postgres','Salesforce','Apollo','Smartlead'], links:[{label:'Inspect the source',href:'https://github.com/0xTrey/folloze-outbound-engine-public'},{label:'Architecture walkthrough',href:'https://replit.trey.work/assets/folloze-outbound-engine-architecture.html'}], note:'Sanitized public reference. Customer data and production telemetry stay private.' },
+  { id:'outbound', name:'The outbound engine', type:'Research → relevant outreach → signal memory', copy:'I built the operating loop I wanted as a seller: research the account, understand the person, create a useful touch, and carry what we learn into the next one.', role:'I designed the operating model and built the engine with coding agents. The public reference shows connector boundaries, scoring, orchestration, and send controls.', nodes:['Account + contact','Research + scoring','Approved outreach','Reply + engagement','Next useful touch'], stack:['Python','Postgres','Salesforce','Apollo','Smartlead'], links:[{label:'Inspect the source',href:publicOutboundRepo},{label:'Architecture walkthrough',href:'https://replit.trey.work/assets/folloze-outbound-engine-architecture.html'}], note:'Sanitized public reference. Customer data and production telemetry stay private.' },
   { id:'content', name:'The content engine', type:'Research → useful content → quality checks', copy:'A content program needs a repeatable operation. I built a pipeline that researches, produces structured articles, checks quality, and prepares the release.', role:'I defined the workflow, editorial constraints, and release checks, then built the system with Codex. I operate the calendar and feed results back into product marketing.', nodes:['Topic + sources','Research + draft','Quality + evidence','Release review','Published content'], stack:['Python','LLMs','JSON-LD','Publishing','QA'], links:[{label:'Inspect the source',href:'https://github.com/0xTrey/folloze-content-engine'},{label:'See the publication',href:'https://www.folloze-blog.com/'}], note:'The broader content program contributed to a 27% lift in inbound demo requests in H1 2026.' },
   { id:'enablement', name:'The customer activation path', type:'Connection → useful workflow → adoption', copy:'An integration only matters when a customer can use it. I built the enablement around Folloze MCP so teams can get from setup to a useful, reviewed experience.', role:'I led customer enablement and the cross-functional connector launch: setup guidance, demos, walkthroughs, portable skills, and feedback into the product.', nodes:['Connect tools','Choose a workflow','Build with context','Review the output','Activate the team'], stack:['MCP','Claude','Codex','Customer skills','Enablement'], links:[{label:'Explore the customer skills',href:'https://github.com/0xTrey/folloze-mcp-customer-skills'}], note:'Public enablement and reusable skills. Enterprise deployment details can be discussed in person.' },
 ];
