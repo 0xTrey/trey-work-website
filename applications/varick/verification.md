@@ -46,3 +46,7 @@ Trey authorized publication to `varick.trey.work` for review. Cloudflare Worker 
 Initial Python urllib requests returned 403; ordinary curl requests and the public browser subsequently loaded without authentication. No access policy or security setting was changed. The earlier local-tab automation request was rejected by browser policy, so local UI automation was not retried. Verification used the requested public HTTPS site.
 
 The public page is a review draft. No job application or outreach was submitted. Social-image delivery passed; third-party social unfurl behavior was not tested.
+
+## Fit link removal, October 12, 2026
+
+Removed the user-selected "Built around your actual role" link from the fit section. Build and deployment passed; Cloudflare version `d0c37a94-02c1-41f8-ba15-cc22e01ad857` serves the update. Public HTML and JavaScript match the build, the removed text is absent from the bundle, and the reloaded browser reports zero matching links. The fit heading and paragraph remain visible in the DOM.

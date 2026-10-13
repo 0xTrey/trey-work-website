@@ -75,7 +75,7 @@ const fit = [
 ];
 
 function Fit() {
-  return <section id="fit" className="section shell fit-section"><div className="section-head"><h2>Your pipeline<br />needs an owner.</h2><div className="section-intro"><p>You need someone who can work the inbound, build the outbound, and stay accountable through signature. That's the intersection I've been working toward.</p><External href={job} className="text-link">Built around your actual role <ArrowUpRight size={16} /></External></div></div>
+  return <section id="fit" className="section shell fit-section"><div className="section-head"><h2>Your pipeline<br />needs an owner.</h2><div className="section-intro"><p>You need someone who can work the inbound, build the outbound, and stay accountable through signature. That's the intersection I've been working toward.</p></div></div>
     <div className="fit-list">{fit.map((f,i) => <article className="fit-row" key={f.title}><span className="row-number">{i+1}</span><div><h3>{f.title}</h3><span className="fit-need">{f.need}</span></div><p>{f.proof}</p><Check size={22} aria-hidden="true" /></article>)}</div>
   </section>;
 }
