@@ -31,30 +31,18 @@ function Header() {
   </div></header>;
 }
 
-function LiquidOrb() {
-  const root = useRef(null), canvas = useRef(null), toggle = useRef(null);
-  useEffect(() => createLiquidField(root.current, canvas.current, toggle.current), []);
-  return <div className="hero-art">
-    <div className="orb-axis axis-x" aria-hidden="true" /><div className="orb-axis axis-y" aria-hidden="true" />
-    <div className="orb-ring ring-outer" aria-hidden="true" /><div className="orb-ring ring-inner" aria-hidden="true" />
-    <div className="liquid-orb" ref={root} data-liquid-field>
-      <canvas ref={canvas} className="liquid-canvas" aria-hidden="true" />
-      <div className="orb-light" aria-hidden="true" /><div className="orb-bubble bubble-one" aria-hidden="true" /><div className="orb-bubble bubble-two" aria-hidden="true" />
-    </div>
-    <span className="orbit-label label-sales">Commercial instinct</span><span className="orbit-label label-build">Technical execution</span>
-    <div className="art-caption"><span className="blue-dot" />Move through the field.</div>
-    <button ref={toggle} className="motion-toggle" data-liquid-toggle type="button" aria-pressed="false"><span aria-hidden="true" />Pause field</button>
-    <a className="identity-card" href="#about"><img src="/images/trey-headshot.jpg" alt="Trey Harnden" /><div><strong>Trey Harnden</strong><span>Enterprise sales × GTM engineering</span></div><ArrowDown size={19} /></a>
-  </div>;
-}
-
 function Hero() {
-  return <section className="hero shell" id="top">
+  const root = useRef(null), canvas = useRef(null);
+  useEffect(() => createLiquidField(root.current, canvas.current), []);
+  return <section className="hero" id="top" ref={root} data-liquid-field>
+    <div className="hero-field" aria-hidden="true"><canvas ref={canvas} className="liquid-canvas"/><div className="field-bubble bubble-one"/><div className="field-bubble bubble-two"/><div className="field-bubble bubble-three"/><div className="field-light"/></div>
+    <div className="shell hero-inner">
     <div className="hero-copy"><h1>I close the deal.<br /><span>I build the<br className="desktop-break" /> system.</span></h1>
       <p>I've won enterprise accounts, grown them, and built the AI systems behind my work. I want to bring all three to Varick.</p>
       <div className="hero-actions"><a href="#work" className="button primary">See how I work <ArrowDown size={18} /></a><External href={resume} className="button quiet">Read my résumé <ArrowUpRight size={18} /></External></div>
       <div className="hero-role"><span className="blue-dot" />Forward Deployed GTM Engineer<External href={job} aria-label="View Varick's Forward Deployed GTM Engineer role"><ArrowUpRight size={15} /></External></div>
-    </div><LiquidOrb />
+    </div><div className="hero-side"><a className="identity-card" href="#about"><img src="/images/trey-headshot.jpg" alt="Trey Harnden" /><div><strong>Trey Harnden</strong><span>Enterprise sales × GTM engineering</span></div><ArrowDown size={19} /></a></div>
+    </div>
   </section>;
 }
 

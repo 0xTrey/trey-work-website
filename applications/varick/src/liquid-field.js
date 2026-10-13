@@ -1,11 +1,12 @@
 // Adapted from Trey's personal-site v2 liquid field. Same pointer wake model, Varick blue palette.
-export function createLiquidField(root, canvas, toggle) {
+export function createLiquidField(root, canvas) {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     if (!root || !canvas) return;
 
     root.dataset.liquidReady = 'true';
     root.dataset.wakeCount = '0';
+    root.dataset.fieldState = reduceMotion.matches ? 'still' : 'moving';
 
     const gl = canvas.getContext('webgl', {
         alpha: false,
@@ -14,16 +15,9 @@ export function createLiquidField(root, canvas, toggle) {
         powerPreference: 'high-performance',
     });
 
-    function updateToggle(paused, unsupported) {
-        if (!toggle) return;
-        toggle.setAttribute('aria-pressed', String(paused));
-        toggle.innerHTML = `<span aria-hidden="true"></span> ${unsupported ? 'Static field' : paused ? 'Resume field' : 'Pause field'}`;
-        toggle.disabled = Boolean(unsupported);
-    }
-
     if (!gl) {
         canvas.hidden = true;
-        updateToggle(true, true);
+        root.dataset.fieldState = 'static';
         return;
     }
 
@@ -80,7 +74,7 @@ export function createLiquidField(root, canvas, toggle) {
         '  float currentA = sin(uv.x * 13.0 + sin(uv.y * 8.0 + uTime * 0.18) * 1.4 + uTime * 0.24);',
         '  float currentB = sin(uv.y * 16.0 - sin(uv.x * 7.0 - uTime * 0.14) * 1.6 - uTime * 0.19);',
         '  vec2 idleWarp = vec2(currentA, currentB) * 0.0035;',
-        '  vec2 tiledUv = (uv + idleWarp) * vec2(7.2, 5.2);',
+        '  vec2 tiledUv = (uv + idleWarp) * vec2(5.2 * aspect, 5.2);',
         '  float tile = gridLine(tiledUv);',
         '  float causticA = abs(sin((uv.x * 8.0 + sin(uv.y * 9.0 + uTime * 0.22)) * 2.2));',
         '  float causticB = abs(sin((uv.y * 7.0 - sin(uv.x * 11.0 - uTime * 0.16)) * 2.0));',
@@ -122,7 +116,7 @@ export function createLiquidField(root, canvas, toggle) {
         }
     } catch (error) {
         canvas.hidden = true;
-        updateToggle(true, true);
+        root.dataset.fieldState = 'static';
         return;
     }
 
@@ -172,8 +166,8 @@ export function createLiquidField(root, canvas, toggle) {
     }
 
     function resize() {
-        const density = Math.min(window.devicePixelRatio || 1, 1.5);
         const bounds = root.getBoundingClientRect();
+        const density = Math.min(window.devicePixelRatio || 1, 1.5, Math.sqrt(2400000 / Math.max(bounds.width * bounds.height, 1)));
         const width = Math.max(1, Math.round(bounds.width * density));
         const height = Math.max(1, Math.round(bounds.height * density));
         if (canvas.width === width && canvas.height === height) return;
@@ -248,13 +242,12 @@ export function createLiquidField(root, canvas, toggle) {
             lastPoint = null;
             frame = window.requestAnimationFrame(draw);
         }
-        updateToggle(paused, false);
+        root.dataset.fieldState = paused ? 'still' : 'moving';
     }
 
     clearWake();
     const resetPointer = () => { lastPoint = null; };
     const onResize = () => { resize(); if (paused) draw(performance.now()); };
-    const onToggle = () => { setPaused(!paused); };
     const onMotion = event => { setPaused(event.matches); if (paused) draw(performance.now()); };
     const onVisibility = () => {
         window.cancelAnimationFrame(frame);
@@ -264,14 +257,13 @@ export function createLiquidField(root, canvas, toggle) {
         if (event.pointerType !== 'touch') return;
         addWake(event.clientX, event.clientY, 1.4, performance.now(), 0.5, -0.3);
     };
-    const onLoss = event => { event.preventDefault(); failed = true; window.cancelAnimationFrame(frame); canvas.hidden = true; updateToggle(true, true); };
+    const onLoss = event => { event.preventDefault(); failed = true; window.cancelAnimationFrame(frame); canvas.hidden = true; root.dataset.fieldState = 'static'; };
     root.addEventListener('pointermove', onPointerMove, { passive: true });
     root.addEventListener('pointerdown', onTouch, { passive: true });
     root.addEventListener('pointerleave', resetPointer, { passive: true });
     canvas.addEventListener('webglcontextlost', onLoss);
     window.addEventListener('resize', onResize, { passive: true });
     document.addEventListener('visibilitychange', onVisibility);
-    toggle?.addEventListener('click', onToggle);
     reduceMotion.addEventListener?.('change', onMotion);
     const observer = new IntersectionObserver(([entry]) => {
         visible = entry.isIntersecting;
@@ -279,7 +271,6 @@ export function createLiquidField(root, canvas, toggle) {
         if (visible && !document.hidden) draw(performance.now());
     });
     observer.observe(root);
-    updateToggle(paused, false);
     resize();
     if (!paused) {
         const bounds = root.getBoundingClientRect();
@@ -295,7 +286,6 @@ export function createLiquidField(root, canvas, toggle) {
         canvas.removeEventListener('webglcontextlost', onLoss);
         window.removeEventListener('resize', onResize);
         document.removeEventListener('visibilitychange', onVisibility);
-        toggle?.removeEventListener('click', onToggle);
         reduceMotion.removeEventListener?.('change', onMotion);
         gl.deleteBuffer(buffer);
         gl.deleteProgram(program);

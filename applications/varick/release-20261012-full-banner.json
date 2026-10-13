@@ -1,0 +1,60 @@
+{
+  "url": "https://varick.trey.work/#top",
+  "worker_version": "b5af9852-6ae6-4c92-b183-0d47077f36bf",
+  "checks": [
+    {
+      "route": "/",
+      "matches_build": true,
+      "sha256": "edf5f41824e4fe1dc4199ac818bf31a2972ed5b3351e6002a3844cf003b1a575"
+    },
+    {
+      "route": "/assets/index-CyEeU0x_.js",
+      "matches_build": true,
+      "sha256": "d238ca0ea523c8e9626c77923ada40ec77556f414151c60baf5338dd062f9c25"
+    },
+    {
+      "route": "/assets/index-BXStPfeX.css",
+      "matches_build": true,
+      "sha256": "125aeabc6cf448eae57459c9f2167554a141945e9b5a505f50b38deff06a31ad"
+    }
+  ],
+  "controller_checks": [
+    "reduced-motion startup",
+    "reduced-motion preference change",
+    "render cap",
+    "context-loss fallback",
+    "unsupported WebGL fallback",
+    "cleanup"
+  ],
+  "controller_check_scope": "Isolated Node harness; browser shader render verified separately.",
+  "browser": {
+    "desktop": {
+      "hero_width": 1265,
+      "hero_height": 755,
+      "canvas_matches_hero": true,
+      "client_width": 1265,
+      "scroll_width": 1265,
+      "wake_count_before": 1,
+      "wake_count_after": 2
+    },
+    "phone": {
+      "viewport_width": 390,
+      "viewport_height": 844,
+      "client_width": 375,
+      "scroll_width": 375,
+      "hero_width": 375,
+      "hero_height": 657.546875,
+      "canvas_matches_hero": true,
+      "profile_card_width": 335,
+      "button_height": 50
+    },
+    "pause_control_count": 0,
+    "console_errors_and_warnings": 0,
+    "work_cta_followed": true,
+    "viewport_restored": true
+  },
+  "screenshots": [
+    "review/20261012-full-banner-desktop.jpg",
+    "review/20261012-full-banner-mobile.jpg"
+  ]
+}

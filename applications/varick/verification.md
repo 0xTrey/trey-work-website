@@ -73,3 +73,16 @@ Screenshots: `review/20261012-real-results-desktop.jpg`, `review/20261012-trade-
 ## First 30 days, October 12, 2026
 
 Changed the heading to "My first 30 days" and the three phases to days 1–7, 8–14, and 15–30. Updated the strategy note and added the `#plan` review anchor. Build and diff checks passed; Cloudflare version `9b070dae-ad84-46b0-a9f3-75a1dd1aa47f` serves the change. Anonymous HTML and JavaScript match the build; the old heading and date ranges are absent from the bundle. The public browser shows the new heading and all three ranges. Screenshot: `review/20261012-first-30-days.jpg`.
+
+## Full-banner liquid field, October 12, 2026
+
+Moved the liquid field from a circular orb into the full-width hero background. Added a dark overlay for readable light text, adjusted the buttons, and placed the profile card above the field. Removed the pause control, its labels, and toggle handlers. The controller still follows reduced-motion preferences and suspends while hidden or offscreen.
+
+- Build, JavaScript syntax, and diff checks passed. Cloudflare version `b5af9852-6ae6-4c92-b183-0d47077f36bf` serves the update.
+- Anonymous HTML, JS and CSS match the build. Pause and Resume labels are absent from the live bundle. Receipt: `release-20261012-full-banner.json`.
+- Desktop: canvas and hero both measure 1265 × 755, with matching left edge. Pointer movement between positions increased the wake count from 1 to 2. The canvas rendered and the browser reported no warning or error entries. Native drag did not produce an observed wake; the successful pointer check used browser locator actions.
+- Phone at 390 × 844: client and scroll widths both equal 375. Canvas and hero both measure 375 × 657.55; the 335px profile card fits within the banner. Both hero buttons have 50px height. The work CTA followed `#work`. Viewport restored afterward.
+- The visible pause-control count is zero on both layouts.
+- Isolated controller checks passed for reduced-motion startup and preference change, the 2.4-million-pixel render cap, context-loss fallback, unsupported WebGL fallback, and listener cleanup. These exercise controller behavior with a stubbed graphics context; real browser rendering was checked separately. No operating-system preference was changed.
+
+Screenshots: `review/20261012-full-banner-desktop.jpg` and `review/20261012-full-banner-mobile.jpg`.

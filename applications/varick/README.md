@@ -10,7 +10,7 @@ npm run preview:varick -- --port 5199
 
 Build output: `dist-varick/`. Strategy and claim review: [strategy.md](strategy.md). Verification: [verification.md](verification.md).
 
-The page uses Varick's published font families and color, with an original candidate layout and a blue adaptation of Trey's personal-site-v2 liquid field. It supports pause, reduced motion, a static WebGL fallback, keyboard-operated project and case tabs, and phone navigation. The results section covers Folloze's commercial record, the Trade Ledger customer prototype, and Try Me Now. Sources and claim limits are in [case-evidence.md](case-evidence.md). No API keys, tracking, external AI calls, or forms are included.
+The page uses Varick's published font families and color, with an original candidate layout and a blue adaptation of Trey's personal-site-v2 liquid field across the entire hero banner. Pointer movement creates wakes across the banner. The field respects reduced motion, suspends offscreen, and has a static WebGL fallback. Rendering is capped near 2.4 million pixels; the visible pause control is removed. Project and case tabs support keyboard navigation. The results section covers Folloze's commercial record, the Trade Ledger customer prototype, and Try Me Now. Sources and claim limits are in [case-evidence.md](case-evidence.md). No API keys, tracking, external AI calls, or forms are included.
 
 Fonts were downloaded from the font URLs in Varick's homepage on October 9, 2026. URLs, hashes, and attribution are in `asset-sources.json`; licenses are in `public/fonts/`. Switzer's license allows self-hosting on Trey's site but restricts redistribution. Its three font files are Git-ignored and fetched with hash checks before development or builds. Fragment Mono is included under its SIL license.
 
@@ -26,7 +26,7 @@ Confirm current title, dates, metrics, and logistics before submission. Before s
 
 ## Release
 
-Published for Trey review at [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`. The October 12 first-30-days update is version `9b070dae-ad84-46b0-a9f3-75a1dd1aa47f`. Public files match the build; HTTP and browser receipts are in [verification.md](verification.md). Earlier releases remain in the verification history, including [the real-results receipt](release-20261012-real-results.json). No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
+Published for Trey review at [varick.trey.work](https://varick.trey.work/), Cloudflare Worker `trey-varick-application`. The October 12 full-banner update is version `b5af9852-6ae6-4c92-b183-0d47077f36bf`. Public files match the build; HTTP and browser receipts are in [verification.md](verification.md). Earlier releases remain in the verification history, including [the real-results receipt](release-20261012-real-results.json). No application or outreach was submitted. `noindex, nofollow` asks search engines not to index the review page.
 
 For an approved update, run `env -u CLOUDFLARE_API_TOKEN npm run deploy:varick`. Verify public HTTPS, homepage, résumé, fonts, portrait, social image, and unknown-path 404. Check desktop and phone interactions against the public route. A successful local build does not establish live publication.
 
