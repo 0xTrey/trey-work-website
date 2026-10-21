@@ -31,6 +31,14 @@ npm run dev
 npm run build
 ```
 
+## Bubble background preview
+
+Branch `codex/trey-work-bubble-preview` adapts the personal v2 and Varick liquid fields for the root site. It adds a teal banner, glass bubbles, pointer wakes, a motion toggle, and a shorter opening. The application sites have their own entry points and styles.
+
+Run `npm run dev -- --port 5186`, then open `http://127.0.0.1:5186/`. Motion respects the visitor's reduced-motion setting, stops when the banner leaves view, and falls back to a static background if WebGL fails. This concept is local and has not been deployed.
+
+Screenshots and verification are in `docs/qa/trey-work-bubbles-20261021/`. The existing career claims and June résumé were carried forward without a new content audit.
+
 ## Varick application
 
 The Varick Forward Deployed GTM Engineer application is live for review at [varick.trey.work](https://varick.trey.work/), with its source in [applications/varick](applications/varick/README.md). Use `npm run dev:varick` or `npm run build:varick`. Its strategy, claim-review notes, tailored résumé, and release receipts live beside the source.

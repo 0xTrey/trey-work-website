@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   ArrowRight,
@@ -10,11 +10,14 @@ import {
   Globe2,
   Linkedin,
   Mail,
-  MapPin,
+  Pause,
+  Play,
   Sparkles,
   X as XIcon,
 } from 'lucide-react';
+import { createLiquidField } from './liquid-field.js';
 import './styles.css';
+import './bubble-preview.css';
 
 const resumePath = '/resume/Trey-Harnden-Resume-June-2026.pdf';
 
@@ -62,7 +65,7 @@ const proofCards = [
 
 const portfolio = [
   {
-    number: '01',
+    number: '1',
     title: 'Folloze Content Engine',
     category: 'AEO / GEO pipeline',
     body: 'A Python publishing system that turns scheduled product-marketing topics into researched, optimized Folloze Insights articles with HTML, JSON-LD, scoring, deployment checks, and social briefs.',
@@ -71,7 +74,7 @@ const portfolio = [
     linkLabel: 'Public GitHub',
   },
   {
-    number: '02',
+    number: '2',
     title: 'Folloze AEO/GEO Blog Engine',
     category: 'LLM citation surface',
     body: 'A machine-first content pipeline for folloze-abm.com focused on rankings, alternatives, comparisons, glossary, methodology pages, and structured citation surfaces.',
@@ -88,7 +91,7 @@ const portfolio = [
     ],
   },
   {
-    number: '03',
+    number: '3',
     title: 'Folloze LinkedIn Engine',
     category: 'Executive content system',
     body: 'A downstream adaptation layer that reads Folloze social briefs and turns them into role-specific LinkedIn drafts while preserving source truth, voice, cadence, and feedback history.',
@@ -97,7 +100,7 @@ const portfolio = [
     linkLabel: 'Public GitHub',
   },
   {
-    number: '04',
+    number: '4',
     title: 'Folloze AI SDR',
     category: 'AI SDR operations',
     body: 'An API-driven outbound loop across Apollo, email reveal, account research, bounded AI personalization, Smartlead enrollment, Salesforce context, Folloze engagement data, and Neon state.',
@@ -106,7 +109,7 @@ const portfolio = [
     linkLabel: 'Public GitHub',
   },
   {
-    number: '05',
+    number: '5',
     title: 'Deal Management Agent',
     category: 'Buyer-safe follow-up',
     body: 'Launched a team wide agent that manages pre-call research, post call notes, follow up emails, Salesforce updates, and automated digital deal room creation & updates.',
@@ -114,7 +117,7 @@ const portfolio = [
     linkLabel: 'Local project',
   },
   {
-    number: '06',
+    number: '6',
     title: 'Automated Demo Environment Builder',
     category: 'Customer demo factory',
     body: 'A repeatable workflow for customer-specific Folloze demo environments with account research, self-contained templates, local QA, save/publish gates, and tracker updates.',
@@ -194,12 +197,12 @@ function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="trey.work home">
-        <span>Trey Harnden</span>
+        <span>Trey Harnden<span className="brand-domain"> / work</span></span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#roles">What I'm looking for</a>
-        <a href="#portfolio">GTME Portfolio</a>
-        <a href="#career">Career History</a>
+        <a href="#roles">The fit</a>
+        <a href="#portfolio">The work</a>
+        <a href="#career">Experience</a>
         <a href="#links">Links</a>
       </nav>
       <a className="button button-small" href={resumePath} download>
@@ -211,37 +214,62 @@ function Header() {
 }
 
 function Hero() {
+  const root = useRef(null);
+  const canvas = useRef(null);
+  const field = useRef(null);
+  const [motion, setMotion] = useState('loading');
+
+  useEffect(() => {
+    const engine = createLiquidField(root.current, canvas.current, setMotion);
+    field.current = engine;
+    return () => {
+      engine.destroy();
+      field.current = null;
+    };
+  }, []);
+
   return (
-    <section id="top" className="hero section-shell">
-      <div className="hero-copy">
-        <h1>
-          <span className="hero-nowrap">Customer-facing</span> GTM operator for{' '}
-          <span className="hero-nowrap">AI-native companies.</span>
-        </h1>
-        <p className="hero-lede">
-          I combine enterprise sales, account management, customer success instincts, and hands-on AI systems building. I am looking for a role where I can help an AI-native company turn technical products into revenue, adoption, customer trust, and repeatable go-to-market infrastructure.
-        </p>
-        <div className="location-row">
-          <MapPin size={18} aria-hidden="true" />
-          <span>Milwaukee today. Relocating to either Seattle or San Francisco this fall.</span>
-        </div>
-        <div className="hero-actions">
-          <a className="button button-primary" href={resumePath} download>
-            <Download size={18} aria-hidden="true" />
-            Download Resume
-          </a>
-          <a className="button" href="https://github.com/0xTrey" target="_blank" rel="noreferrer">
-            <Github size={18} aria-hidden="true" />
-            View GitHub
-          </a>
-          <a className="button" href="https://www.linkedin.com/in/treyharnden/" target="_blank" rel="noreferrer">
-            <Linkedin size={18} aria-hidden="true" />
-            LinkedIn
-          </a>
-        </div>
+    <section id="top" className="bubble-hero" ref={root} data-liquid-field>
+      <div className="hero-field" aria-hidden="true">
+        <canvas ref={canvas} className="liquid-canvas" />
+        <div className="field-bubble bubble-one" />
+        <div className="field-bubble bubble-two" />
+        <div className="field-bubble bubble-three" />
+        <div className="field-bubble bubble-four" />
+        <div className="field-shade" />
       </div>
-      <div className="hero-media" aria-label="Trey Harnden">
-        <img src="/images/trey-headshot.jpg" alt="Trey Harnden professional headshot" />
+      <div className="hero-inner section-shell">
+        <div className="hero-copy">
+          <h1>I close the deal.<br /><span>I build the system.</span></h1>
+          <p className="hero-lede">
+            Enterprise sales, partnerships, and hands-on AI systems. I turn technical products into revenue and build the workflows behind the work.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#portfolio">
+              See what I've built
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+            <a className="button hero-resume" href={resumePath} download>
+              Read my résumé
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          </div>
+          <a className="hero-contact" href="mailto:harnden.trey@gmail.com">
+            <span aria-hidden="true" /> Let's talk about what you're building <ArrowUpRight size={15} aria-hidden="true" />
+          </a>
+        </div>
+        <figure className="hero-portrait">
+          <img src="/images/trey-headshot.jpg" alt="Trey Harnden professional headshot" />
+          <figcaption>Trey Harnden<span>Enterprise GTM × AI systems</span></figcaption>
+        </figure>
+        <div className="hero-bottom">
+          <a href="#portfolio" className="hero-explore">Explore the work <ArrowRight size={15} aria-hidden="true" /></a>
+          <button className="motion-toggle" onClick={() => field.current?.toggle()}
+            aria-pressed={motion !== 'moving'} disabled={motion === 'static' || motion === 'loading'}>
+            {motion === 'moving' ? <Pause size={14} aria-hidden="true" /> : <Play size={14} aria-hidden="true" />}
+            {motion === 'loading' ? 'Loading motion' : motion === 'static' ? 'Static background' : motion === 'moving' ? 'Pause motion' : 'Resume motion'}
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -267,7 +295,6 @@ function IntroSection() {
         <img src="/images/trey-rainier.jpeg" alt="Trey Harnden on Mount Rainier" />
       </div>
       <div className="intro-copy">
-        <span className="section-label">Brief introduction</span>
         <h2>Enterprise GTM background with a focus on building AI powered systems.</h2>
         <p>
           I started as an SDR and over the course of 4 years grew to be an enterprise account executive. Then I expanded my breadth of GTM skills by running targeted marketing plays, leading ABM efforts from the sales side, and owning indirect business (partnerships, channel, and OEM). Over the last year I have gone headfirst into AI and now lead the Go To Market Engineering efforts & Forward Deployed Engineering team.
@@ -281,7 +308,6 @@ function RoleSection() {
   return (
     <section id="roles" className="section-shell role-section">
       <div className="section-heading">
-        <span className="section-label">What I am looking for</span>
         <h2>A customer-facing role where AI systems, GTM judgment, and revenue ownership meet.</h2>
       </div>
       <div>
@@ -302,7 +328,6 @@ function ProofSection() {
   return (
     <section className="section-shell proof-section">
       <div className="section-heading proof-heading">
-        <span className="section-label">Why me</span>
         <h2>Sales proof, customer fluency, and systems-building are the same operating motion.</h2>
       </div>
       <div className="proof-grid">
@@ -324,7 +349,6 @@ function PortfolioSection() {
       <div className="section-shell">
         <div className="portfolio-header">
           <div className="section-heading">
-            <span className="section-label">GTME portfolio</span>
             <h2>Systems built to make sales, marketing, and customer work more repeatable.</h2>
           </div>
         </div>
@@ -371,7 +395,6 @@ function CareerSection() {
   return (
     <section id="career" className="section-shell career-section">
       <div className="section-heading">
-        <span className="section-label">Career history</span>
         <h2>From SaaS sales into enterprise GTM engineering.</h2>
       </div>
       <div className="timeline">
@@ -397,7 +420,6 @@ function LinksSection() {
     <section id="links" className="links-section">
       <div className="section-shell links-grid">
         <div>
-          <span className="section-label">Links</span>
           <h2>Public profiles and writing.</h2>
           <p>
             I've been building and managing my life in public for the last five years. Feel free to take a look at some of my writing or project portfolio by clicking any of the links to the right.
@@ -455,8 +477,9 @@ function Footer() {
 function App() {
   return (
     <>
+      <a className="skip-link" href="#main">Skip to content</a>
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <Metrics />
         <IntroSection />

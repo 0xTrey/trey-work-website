@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-21",
+  "url": "http://127.0.0.1:5186/",
+  "mobile": {
+    "button": "Resume motion",
+    "clientWidth": 375,
+    "fieldState": "still",
+    "pressed": "true",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  "narrow": {
+    "clientWidth": 305,
+    "scrollWidth": 305,
+    "width": 320
+  },
+  "tablet": {
+    "clientWidth": 753,
+    "scrollWidth": 753,
+    "width": 768
+  },
+  "fallback": {
+    "button": "Static background",
+    "canvasHidden": true,
+    "disabled": true,
+    "state": "static"
+  },
+  "desktop": {
+    "clientWidth": 1265,
+    "height": 720,
+    "heroBottom": 720,
+    "scrollWidth": 1265,
+    "scrollY": 0,
+    "state": "moving",
+    "wakeCount": "2",
+    "width": 1280
+  },
+  "finalConsole": []
+}
