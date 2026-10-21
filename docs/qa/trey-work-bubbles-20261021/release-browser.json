@@ -1,0 +1,30 @@
+{
+  "url": "https://trey.work/",
+  "paused": {
+    "label": "Resume motion",
+    "pressed": "true",
+    "state": "still"
+  },
+  "resumed": {
+    "label": "Pause motion",
+    "pressed": "false",
+    "state": "moving"
+  },
+  "mobile": {
+    "clientWidth": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "scrollY": 0,
+    "state": "moving",
+    "width": 390
+  },
+  "desktop": {
+    "clientWidth": 1088,
+    "height": 1354,
+    "scrollWidth": 1088,
+    "scrollY": 0,
+    "state": "moving",
+    "width": 1103
+  },
+  "logs": []
+}

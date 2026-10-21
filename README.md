@@ -31,13 +31,13 @@ npm run dev
 npm run build
 ```
 
-## Bubble background preview
+## Bubble background
 
-Branch `codex/trey-work-bubble-preview` adapts the personal v2 and Varick liquid fields for the root site. It adds a teal banner, glass bubbles, pointer wakes, a motion toggle, and a shorter opening. The application sites have their own entry points and styles.
+The root site adapts the personal v2 and Varick liquid fields. It adds a teal banner, glass bubbles, pointer wakes, a motion toggle, and a shorter opening. The application sites have their own entry points and styles.
 
-Run `npm run dev -- --port 5186`, then open `http://127.0.0.1:5186/`. Motion respects the visitor's reduced-motion setting, stops when the banner leaves view, and falls back to a static background if WebGL fails. This concept is local and has not been deployed.
+Run `npm run dev -- --port 5186`, then open `http://127.0.0.1:5186/`. Motion respects the visitor's reduced-motion setting, stops when the banner leaves view, and falls back to a static background if WebGL fails. Published at [trey.work](https://trey.work/) and [www.trey.work](https://www.trey.work/) on October 21, 2026, from source commit `fb4d338`.
 
-Screenshots and verification are in `docs/qa/trey-work-bubbles-20261021/`. The existing career claims and June résumé were carried forward without a new content audit.
+Screenshots and verification are in `docs/qa/trey-work-bubbles-20261021/`. See `RELEASE.md` there for deployment and rollback details. The existing career claims and June résumé were carried forward without a new content audit.
 
 ## Varick application
 

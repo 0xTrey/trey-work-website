@@ -1,6 +1,6 @@
 # trey.work bubble preview
 
-October 21, 2026. Local concept for review, not a live release.
+October 21, 2026. Initial local review receipt. Publication is recorded separately in `RELEASE.md`.
 
 Goal: bring the personal v2 liquid-field idea to the professional root site, with a readable banner, mobile layout, and motion controls.
 
@@ -22,4 +22,4 @@ Verified in the Codex in-app browser at `http://127.0.0.1:5186/`:
 
 Desktop screenshot: `desktop.png`. Machine-readable browser observations: `browser-checks.json`.
 
-Save state: local Git branch `codex/trey-work-bubble-preview`. No remote push or deployment. Broader career copy, project descriptions, and résumé currency remain available for a later content pass. The personal-site source was read only.
+Initial save state: local Git branch `codex/trey-work-bubble-preview`, commit `fb4d338`. Publication followed after explicit user approval; see `RELEASE.md`. Broader career copy, project descriptions, and résumé currency remain available for a later content pass. The personal-site source was read only.

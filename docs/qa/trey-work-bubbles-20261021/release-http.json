@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-21",
+  "source_commit": "fb4d338bd2494ea31a73c30a6411c3f4fbbed2f6",
+  "project": "trey-work-website",
+  "deployment_url": "https://6c027773.trey-work-website.pages.dev/",
+  "previous_deployment_id": "c7b63733-8b67-48b1-b3a5-44df473f133e",
+  "checks": [
+    {
+      "url": "https://trey.work/",
+      "final_url": "https://trey.work/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "edb96a3cd7876ddb456699c03a33ab98487ba55e0d299aa51b4551d103352b2b",
+      "matches_local_build": true
+    },
+    {
+      "url": "https://www.trey.work/",
+      "final_url": "https://www.trey.work/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "edb96a3cd7876ddb456699c03a33ab98487ba55e0d299aa51b4551d103352b2b",
+      "matches_local_build": true
+    },
+    {
+      "url": "https://6c027773.trey-work-website.pages.dev/",
+      "final_url": "https://6c027773.trey-work-website.pages.dev/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "edb96a3cd7876ddb456699c03a33ab98487ba55e0d299aa51b4551d103352b2b",
+      "matches_local_build": true
+    },
+    {
+      "url": "https://trey.work/assets/index-D2DHvsJk.js",
+      "final_url": "https://trey.work/assets/index-D2DHvsJk.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "sha256": "66b88578094ea378b3be1c0591fecea061b243be3afcda1170cacd64d2efeb42",
+      "matches_local_build": true
+    },
+    {
+      "url": "https://trey.work/assets/index-CJ_igV7u.css",
+      "final_url": "https://trey.work/assets/index-CJ_igV7u.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "sha256": "30c979a3f546781f58c4e2503ee26fb5fea89b3a8d3bc2458245d752c881b6e6",
+      "matches_local_build": true
+    },
+    {
+      "url": "https://trey.work/images/trey-headshot.jpg",
+      "final_url": "https://trey.work/images/trey-headshot.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "sha256": "fd4793f387c7a69437b9b2a6485b769fa59225857b58313032d4af4721c33820",
+      "matches_local_build": true
+    },
+    {
+      "url": "https://trey.work/resume/Trey-Harnden-Resume-June-2026.pdf",
+      "final_url": "https://trey.work/resume/Trey-Harnden-Resume-June-2026.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "3ab168d3c96fc5060338d4e8246e00f041b2c36c55022653a8c90d8991378472",
+      "matches_local_build": true
+    }
+  ],
+  "deployment_id": "6c027773-d207-4ba2-aabe-bae371808bc3",
+  "environment": "production",
+  "branch": "main"
+}
